@@ -4,24 +4,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UI.BeforeAuth.IntroScreen.IntroActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".UI.BeforeAuth.IntroScreen.IntroActivity">
 
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        />
+        android:layout_height="@dimen/_270sdp" />
 
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/intro_screen_background"
+        android:elevation="@dimen/_20sdp"
+        android:orientation="vertical"
         >
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/intro_bold_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_60sdp"
+                android:fontFamily="@font/inter_bold"
+                android:text="Are you excited?"
+                android:textColor="@color/bold_text_color"
+                android:textSize="@dimen/_24sdp" />
+
+
+            <TextView
+                android:id="@+id/intro_description_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/inter_medium"
+                android:text="This smart tool is designed to help you better manage your tasks!"
+                android:textAlignment="center"
+                android:textColor="@color/small_text_color"
+                android:textSize="@dimen/_13sdp" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/intro_next_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginHorizontal="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_60sdp"
+            android:background="@drawable/background_next_btn"
+            android:elevation="@dimen/_10sdp"
+            android:gravity="center"
+            android:text="Next"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
 
 </LinearLayout>

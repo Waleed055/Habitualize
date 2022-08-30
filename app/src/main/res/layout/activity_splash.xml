@@ -7,11 +7,13 @@
     tools:context=".UI.BeforeAuth.Splash.SplashActivity">
 
 
-    <ImageView
+    <pl.droidsonroids.gif.GifImageView
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:src="@drawable/splash_icon"
+        android:src="@drawable/splash_gif"
         />
+
+
 
 </RelativeLayout>

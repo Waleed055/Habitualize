@@ -24,4 +24,5 @@
         app:bn_item_color="@color/black"
         app:bn_menu="@menu/bottom_nav_menu" />
 
+
 </RelativeLayout>

@@ -1,8 +1,10 @@
 package com.example.habitualize.UI.BeforeAuth.Splash
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.habitualize.R
+import com.example.habitualize.UI.BeforeAuth.IntroScreen.IntroActivity
 
 class SplashActivity : AppCompatActivity() {
 
@@ -14,11 +16,10 @@ class SplashActivity : AppCompatActivity() {
             override fun run() {
                 try {
 
-                    sleep(5000)
-//                    val intent = Intent(this@SplashScreen, SelectServiceAct::class.java)
-//                    startActivity(intent)
+                    sleep(2000)
+                    val intent = Intent(this@SplashActivity, IntroActivity::class.java)
+                    startActivity(intent)
                     finish()
-
 
                 }catch (e: Exception)
                 {
