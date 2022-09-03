@@ -2,4 +2,10 @@
     <string name="app_name">Habitualize</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="intro_1_bold_text">Are you excited?</string>
+    <string name="intro_1_dec_text">This smart tool is designed to help you improve your roles, tasks, and responsibilities. Be mentally healthy!</string>
+    <string name="intro_2_bold_text">Click on the bell</string>
+    <string name="intro_2_dec_text">And choose the time to be notified</string>
+    <string name="intro_3_bold_text">Welcome, Kashif!</string>
+    <string name="intro_3_dec_text">If you want to live a better life, you can start establishing good habits today. 30 days habit challenge ensures those good habits stays permanently in your life..</string>
 </resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    >
+
+    <FrameLayout
+        android:layout_width="@dimen/_160sdp"
+        android:layout_height="@dimen/_140sdp"
+        android:layout_centerInParent="true"
+        android:clipChildren="false"
+        android:background="@drawable/item_task_background"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:elevation="@dimen/_10sdp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_70sdp"
+                android:src="@drawable/chat_icon"
+                android:layout_marginTop="-12dp"
+                android:layout_gravity="center_horizontal"
+                />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                >
+                <TextView
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="wrap_content"
+                    android:text="Positive Affirmations part2"
+                    android:fontFamily="@font/inter_semi_bold"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/bold_text_color"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="14/30"
+                    android:fontFamily="@font/inter_regular"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/bold_text_color"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    />
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+
+</RelativeLayout>
