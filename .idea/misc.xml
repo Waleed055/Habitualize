@@ -7,6 +7,7 @@
         <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/drawable/background_forword_btn.xml" value="0.1335" />
         <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/drawable/background_next_btn.xml" value="0.1455" />
         <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/drawable/complete_btn_background.xml" value="0.14" />
+        <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/drawable/drawer_background.xml" value="0.14" />
         <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/drawable/edit_text_background.xml" value="0.1335" />
         <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/drawable/gernal_dialouge_background.xml" value="0.14" />
         <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/drawable/image_view_background.xml" value="0.1335" />
@@ -21,7 +22,7 @@
         <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/layout/fragment_.xml" value="0.20416666666666666" />
         <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/layout/fragment_chat.xml" value="0.19010416666666666" />
         <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/layout/fragment_profile.xml" value="0.19010416666666666" />
-        <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/layout/fragment_task.xml" value="0.22" />
+        <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/layout/fragment_task.xml" value="0.2" />
         <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/layout/item_confirmation_dialouge.xml" value="0.203125" />
         <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/layout/item_intro_gif.xml" value="0.1693840579710145" />
         <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/layout/item_task.xml" value="0.20416666666666666" />

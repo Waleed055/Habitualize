@@ -14,6 +14,7 @@
     <color name="small_text_color">#8A8A8A</color>
     <color name="theme">#7468EE</color>
     <color name="green">#00CA71</color>
+    <color name="gray">#EAE9FB</color>
 
 
 </resources>

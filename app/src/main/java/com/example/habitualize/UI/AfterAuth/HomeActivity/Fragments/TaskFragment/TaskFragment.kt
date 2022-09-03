@@ -5,13 +5,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.FrameLayout
+import android.widget.ImageView
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.habitualize.R
 import com.example.habitualize.UI.AfterAuth.HomeActivity.Fragments.TaskFragment.Adapter.TaskAdapter
 
 class TaskFragment : Fragment() {
 
-
+    lateinit var task_parent : FrameLayout
+    lateinit var taskDrawerOpenBtn : ImageView
     lateinit var taskAdapter: TaskAdapter
     lateinit var taskRv: RecyclerView
 
@@ -30,8 +35,14 @@ class TaskFragment : Fragment() {
 
         initViews(view)
         initAdapter()
+        initListeners()
 
         return view
+    }
+
+    private fun initListeners() {
+        taskDrawerOpenBtn.setOnClickListener {
+        }
     }
 
     private fun initAdapter() {
@@ -40,7 +51,11 @@ class TaskFragment : Fragment() {
     }
 
     private fun initViews(view: View) {
+        task_parent = view.findViewById(R.id.task_parent)
+        taskDrawerOpenBtn = view.findViewById(R.id.task_drawer_open_btn)
         taskRv = view.findViewById(R.id.task_rv)
+
+
     }
 
 }

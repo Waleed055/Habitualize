@@ -8,4 +8,12 @@
     <string name="intro_2_dec_text">And choose the time to be notified</string>
     <string name="intro_3_bold_text">Welcome, Kashif!</string>
     <string name="intro_3_dec_text">If you want to live a better life, you can start establishing good habits today. 30 days habit challenge ensures those good habits stays permanently in your life..</string>
+    <string name="user_name">Kashif Asif</string>
+    <string name="blog">Blog</string>
+    <string name="premium">Premium</string>
+    <string name="community">community challenges</string>
+    <string name="share_with_friends">Share with friends</string>
+    <string name="reminder">Reminder</string>
+    <string name="contact">Contact us</string>
+    <string name="logout">Logout</string>
 </resources>
