@@ -16,11 +16,7 @@
         <activity
             android:name=".UI.AfterAuth.HomeActivity.HomeActivity"
             android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".UI.BeforeAuth.IntroScreen.IntroActivity"
@@ -31,7 +27,11 @@
         <activity
             android:name=".UI.BeforeAuth.Splash.SplashActivity"
             android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
         <activity

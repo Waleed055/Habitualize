@@ -43,6 +43,7 @@
         android:layout_height="match_parent"
         android:layout_marginEnd="@dimen/_60sdp"
         android:background="@drawable/drawer_background"
+        android:visibility="gone"
         >
 
 

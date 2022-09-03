@@ -32,7 +32,7 @@ class HomeActivity : AppCompatActivity() {
         userDrawer = findViewById(R.id.user_drawer)
     }
 
-    
+
 
     fun setUpNavBar() {
         bottom_nav_view = findViewById(R.id.bottom_nav_view)
