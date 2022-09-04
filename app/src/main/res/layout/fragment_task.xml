@@ -7,7 +7,7 @@
     android:background="@color/theme"
     android:orientation="vertical"
     android:id="@+id/task_parent"
-    tools:context=".UI.AfterAuth.HomeActivity.Fragments.TaskFragment.TaskFragment">
+    tools:context=".ui.afterauth.home.fragments.taskfragment.TaskFragment">
 
 
     <LinearLayout

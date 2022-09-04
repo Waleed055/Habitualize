@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/chatFragment"
-        android:name="com.example.habitualize.UI.AfterAuth.HomeActivity.Fragments.ChatFragment"
+        android:name="com.example.habitualize.ui.afterauth.home.fragments.ChatFragment"
         android:label="fragment_chat"
         tools:layout="@layout/fragment_chat" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.habitualize.UI.AfterAuth.HomeActivity.Fragments.ProfileFragment"
+        android:name="com.example.habitualize.ui.afterauth.home.fragments.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/taskFragment"
-        android:name="com.example.habitualize.UI.AfterAuth.HomeActivity.Fragments.TaskFragment.TaskFragment"
+        android:name="com.example.habitualize.ui.afterauth.home.fragments.taskfragment.TaskFragment"
         android:label="fragment_task"
         tools:layout="@layout/fragment_task" />
 </navigation>

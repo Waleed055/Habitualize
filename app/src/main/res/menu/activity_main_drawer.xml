@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_blog"
+            android:icon="@drawable/blog_icon"
+            android:title="@string/blog" />
+        <item
+            android:id="@+id/nav_community"
+            android:icon="@drawable/community_icon"
+            android:title="@string/community" />
+        <item
+            android:id="@+id/nav_share_with_friend"
+            android:icon="@drawable/share_icon"
+            android:title="@string/share_with_friends" />
+        <item
+            android:id="@+id/nav_reminder"
+            android:icon="@drawable/reminder_icon"
+            android:title="@string/reminder" />
+        <item
+            android:id="@+id/nav_contact_us"
+            android:icon="@drawable/contect_us_icon"
+            android:title="@string/contact" />
+        <item
+            android:id="@+id/nav_log_out"
+            android:icon="@drawable/logout_icon"
+            android:title="@string/logout" />
+    </group>
+</menu>
