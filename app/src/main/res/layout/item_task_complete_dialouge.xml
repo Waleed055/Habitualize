@@ -9,25 +9,42 @@
     <RelativeLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_230sdp"
+        android:layout_height="@dimen/_250sdp"
         >
 
 
-
-        <ImageView
-            android:id="@+id/dialoge_img"
+        <RelativeLayout
+            android:id="@+id/gif_layout"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_90sdp"
-            android:src="@drawable/task_complete_icon"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            >
+
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/dialoge_gif"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_130sdp"
+            android:src="@drawable/task_complete_gif"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/_20sdp"
             />
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/dialoge_gif2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_130sdp"
+            android:src="@drawable/task_done_gif"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            />
+
+        </RelativeLayout>
+
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/dialoge_img"
+            android:layout_below="@+id/gif_layout"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/_15sdp"
@@ -47,10 +64,10 @@
             android:background="@drawable/complete_btn_background"
             android:elevation="@dimen/_10sdp"
             android:fontFamily="@font/roboto_regular"
-            android:textSize="@dimen/_12sdp"
             android:gravity="center"
             android:text="let,s go!"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp" />
 
     </RelativeLayout>
 

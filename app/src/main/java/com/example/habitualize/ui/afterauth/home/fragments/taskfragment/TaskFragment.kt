@@ -19,6 +19,11 @@ import com.example.habitualize.R
 import com.example.habitualize.ui.afterauth.home.HomeActivity
 import com.example.habitualize.ui.afterauth.home.fragments.taskfragment.Adapter.TaskAdapter
 import com.example.habitualize.ui.afterauth.home.fragments.taskfragment.taskInterface.TaskItemListener
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
+import pl.droidsonroids.gif.GifImageView
 
 class TaskFragment : Fragment() , TaskItemListener {
 
@@ -77,9 +82,19 @@ class TaskFragment : Fragment() , TaskItemListener {
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT));
         dialog.setContentView(R.layout.item_task_complete_dialouge)
         dialog.show()
+        var gifView = dialog.findViewById<GifImageView>(R.id.dialoge_gif)
+        var gifView2 = dialog.findViewById<GifImageView>(R.id.dialoge_gif2)
         var button = dialog.findViewById<TextView>(R.id.done_btn)
+
+
+
         button.setOnClickListener {
-            Toast.makeText(requireContext(), "Chalo g", Toast.LENGTH_SHORT).show()
+            gifView.visibility = View.GONE
+            gifView2.visibility = View.VISIBLE
+         GlobalScope.launch {
+             delay(2000)
+             dialog.dismiss()
+         }
         }
     }
 
