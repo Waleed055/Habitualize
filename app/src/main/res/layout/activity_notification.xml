@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.afterauth.notification.NotificationActivity"
+    android:background="@color/theme">
+
+    <include
+        android:id="@+id/notification_included_layout"
+        layout="@layout/header_layout"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/task_rv_background"
+        android:layout_below="@id/notification_included_layout">
+
+    </RelativeLayout>
+
+</RelativeLayout>

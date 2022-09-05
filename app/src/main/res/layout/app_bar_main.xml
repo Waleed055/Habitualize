@@ -64,6 +64,8 @@
             app:rippleColor="@color/theme"
             android:backgroundTint="@color/theme"
             android:src="@drawable/task_icon"
+            android:outlineSpotShadowColor="@color/theme"
+            android:outlineAmbientShadowColor="@color/theme"
             app:layout_anchor="@id/bottomAppBar"
             android:layout_marginTop="-10dp"/>
 
