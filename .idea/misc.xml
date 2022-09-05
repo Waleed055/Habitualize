@@ -50,7 +50,9 @@
         <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/layout/item_intro_gif.xml" value="0.1693840579710145" />
         <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/layout/item_task.xml" value="0.20416666666666666" />
         <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/layout/item_task_complete_dialouge.xml" value="0.20416666666666666" />
+        <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/menu/activity_main_drawer.xml" value="0.75" />
         <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/menu/drawer.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>

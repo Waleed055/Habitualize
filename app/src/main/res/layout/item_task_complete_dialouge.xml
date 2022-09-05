@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gernal_dialouge_background"
+    >
 
     <RelativeLayout
         android:orientation="vertical"
@@ -30,22 +32,24 @@
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/_15sdp"
             android:fontFamily="@font/roboto_regular"
-            android:text="Positive Affirmations part2"
+            android:text="Task Completed"
             android:textColor="@color/bold_text_color"
-            android:textSize="@dimen/_16sdp" />
+            android:textSize="@dimen/_18sdp" />
 
 
         <TextView
-            android:id="@+id/intro_next_btn"
+            android:id="@+id/done_btn"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_35sdp"
             android:layout_alignParentBottom="true"
-            android:layout_marginHorizontal="@dimen/_20sdp"
-            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
             android:background="@drawable/complete_btn_background"
             android:elevation="@dimen/_10sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="@dimen/_12sdp"
             android:gravity="center"
-            android:text="Next"
+            android:text="let,s go!"
             android:textColor="@color/white" />
 
     </RelativeLayout>
