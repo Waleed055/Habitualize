@@ -14,10 +14,11 @@
         android:theme="@style/Theme.Habitualize"
         tools:targetApi="31">
         <activity
+            android:name=".ui.afterauth.notification.NotificationActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.afterauth.home.HomeActivity"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".ui.beforeauth.introscreens.IntroActivity"
             android:exported="false" />
@@ -26,7 +27,7 @@
             android:exported="false" />
         <activity
             android:name=".ui.beforeauth.splash.SplashActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
