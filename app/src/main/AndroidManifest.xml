@@ -15,7 +15,13 @@
         tools:targetApi="31">
         <activity
             android:name=".ui.afterauth.notification.NotificationActivity"
-            android:exported="false" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".ui.afterauth.home.HomeActivity"
             android:exported="true">
@@ -27,6 +33,7 @@
             </intent-filter>
 
         </activity>
+
         <activity
             android:name=".ui.beforeauth.introscreens.IntroActivity"
             android:exported="false" />
@@ -36,7 +43,6 @@
         <activity
             android:name=".ui.beforeauth.splash.SplashActivity"
             android:exported="true">
-
         </activity>
     </application>
 

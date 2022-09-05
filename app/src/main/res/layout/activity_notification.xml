@@ -18,6 +18,63 @@
         android:layout_height="match_parent"
         android:background="@drawable/task_rv_background"
         android:layout_below="@id/notification_included_layout">
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/notification_gif_layout"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="@dimen/_160sdp"
+            android:src="@drawable/notification_gif"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"/>
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/gray"
+            android:layout_below="@id/notification_gif_layout"
+            android:layout_marginTop="@dimen/_10sdp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_below="@id/view"
+            android:layout_marginTop="@dimen/_10sdp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notifications"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="@dimen/_12sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_15sdp" />
+
+            <Switch
+                android:id="@+id/fragment_profile_social_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:switchMinWidth="@dimen/_42sdp"
+                android:theme="@style/SCBSwitch"
+                app:tint="@color/black" />
+        </RelativeLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:backgroundTint="@color/theme"
+            android:contentDescription="@string/app_name"
+            android:outlineAmbientShadowColor="@color/theme"
+            android:outlineSpotShadowColor="@color/theme"
+            android:src="@drawable/task_icon"
+            android:tint="@color/white"
+            app:rippleColor="@color/theme" />
 
     </RelativeLayout>
 
