@@ -45,7 +45,7 @@ class TaskFragment : Fragment() {
 
     private fun initListeners() {
         taskDrawerOpenBtn.setOnClickListener {
-            (activity as HomeActivity).drawerLayout.open()
+            (activity as HomeActivity).openDrawer()
         }
     }
 
