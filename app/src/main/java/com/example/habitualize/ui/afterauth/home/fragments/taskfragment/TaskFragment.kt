@@ -1,19 +1,26 @@
 package com.example.habitualize.ui.afterauth.home.fragments.taskfragment
 
+import android.app.Dialog
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
 import android.widget.FrameLayout
 import android.widget.ImageView
+import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import androidx.transition.TransitionInflater
 import com.example.habitualize.R
 import com.example.habitualize.ui.afterauth.home.HomeActivity
 import com.example.habitualize.ui.afterauth.home.fragments.taskfragment.Adapter.TaskAdapter
+import com.example.habitualize.ui.afterauth.home.fragments.taskfragment.taskInterface.TaskItemListener
 
-class TaskFragment : Fragment() {
+class TaskFragment : Fragment() , TaskItemListener {
 
     lateinit var task_parent : FrameLayout
     lateinit var taskDrawerOpenBtn : ImageView
@@ -50,7 +57,7 @@ class TaskFragment : Fragment() {
     }
 
     private fun initAdapter() {
-        taskAdapter = TaskAdapter(requireContext())
+        taskAdapter = TaskAdapter(requireContext(),this)
         taskRv.adapter = taskAdapter
     }
 
@@ -60,6 +67,37 @@ class TaskFragment : Fragment() {
         taskRv = view.findViewById(R.id.task_rv)
 
 
+    }
+
+
+
+   private fun showTaskCompleteDialog() {
+        val dialog = Dialog(requireContext())
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT));
+        dialog.setContentView(R.layout.item_task_complete_dialouge)
+        dialog.show()
+        var button = dialog.findViewById<TextView>(R.id.done_btn)
+        button.setOnClickListener {
+            Toast.makeText(requireContext(), "Chalo g", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+   private fun showConfirmationDialog() {
+        val dialog = Dialog(requireContext())
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT));
+        dialog.setContentView(R.layout.item_confirmation_dialouge)
+        dialog.show()
+        var button = dialog.findViewById<TextView>(R.id.confirmation_btn)
+        button.setOnClickListener {
+            dialog.dismiss()
+            showTaskCompleteDialog()
+        }
+    }
+
+    override fun onItemClicked(position: Int) {
+        showConfirmationDialog()
     }
 
 }

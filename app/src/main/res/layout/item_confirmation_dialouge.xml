@@ -28,7 +28,7 @@
                 android:id="@+id/dialoge_img"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_70sdp"
-                android:src="@drawable/chat_icon"
+                android:src="@drawable/place_holder"
                 android:layout_marginTop="-12dp"
                 android:layout_gravity="center_horizontal"
                 />
@@ -49,8 +49,8 @@
                     android:layout_height="wrap_content"
                     android:text="Positive Affirmations part2"
                     android:fontFamily="@font/roboto_regular"
-                    android:textSize="@dimen/_16sdp"
-                    android:textColor="@color/bold_text_color"
+                    android:textSize="@dimen/_18sdp"
+                    android:textColor="@color/black"
                     android:layout_gravity="center"
                     android:layout_marginTop="@dimen/_5sdp"
                     />
@@ -59,9 +59,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Do you want to start challenge?"
+                    android:text="Do you want to Start challenge?"
                     android:fontFamily="@font/inter_regular"
-                    android:textSize="@dimen/_10sdp"
+                    android:textSize="@dimen/_12sdp"
                     android:layout_marginTop="@dimen/_25sdp"
                     android:textColor="@color/bold_text_color"
                     android:layout_alignParentEnd="true"
@@ -72,13 +72,15 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/intro_next_btn"
+                android:id="@+id/confirmation_btn"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_35sdp"
                 android:background="@drawable/background_next_btn"
                 android:elevation="@dimen/_10sdp"
                 android:gravity="center"
-                android:text="Next"
+                android:text="let,go!"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="@dimen/_12sdp"
                 android:layout_alignParentBottom="true"
                 android:layout_marginBottom="@dimen/_10sdp"
                 android:layout_marginHorizontal="@dimen/_20sdp"
