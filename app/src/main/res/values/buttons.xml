@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="icons">
+        <item>@drawable/hide_icon</item>
+        <item>@drawable/notification_icon_with_label</item>
+        <item>@drawable/restart_icon</item>
+
+    </array>
+    <array name="colors">
+        <item>@color/theme</item>
+        <item>@color/theme</item>
+        <item>@color/theme</item>
+    </array>
+
+</resources>

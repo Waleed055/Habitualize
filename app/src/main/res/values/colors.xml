@@ -16,4 +16,6 @@
     <color name="theme_light">#D4E1F5</color>
     <color name="green">#00CA71</color>
     <color name="gray">#EAE9FB</color>
+    <color name="light_theme_bold">#565510</color>
+    <color name="light">#CFCEA3</color>
 </resources>

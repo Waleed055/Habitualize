@@ -1,6 +1,7 @@
 package com.example.habitualize.ui.afterauth.home.fragments.taskfragment
 
 import android.app.Dialog
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -19,6 +20,7 @@ import com.example.habitualize.R
 import com.example.habitualize.ui.afterauth.home.HomeActivity
 import com.example.habitualize.ui.afterauth.home.fragments.taskfragment.Adapter.TaskAdapter
 import com.example.habitualize.ui.afterauth.home.fragments.taskfragment.taskInterface.TaskItemListener
+import com.example.habitualize.ui.afterauth.taskschedule.TaskShedule
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -94,6 +96,7 @@ class TaskFragment : Fragment() , TaskItemListener {
          GlobalScope.launch {
              delay(2000)
              dialog.dismiss()
+             startActivity(Intent(requireContext(),TaskShedule::class.java))
          }
         }
     }

@@ -10,7 +10,7 @@
 
     <include
         android:id="@+id/notification_included_layout"
-        layout="@layout/header_layout"/>
+        layout="@layout/header_layout" />
 
 
     <RelativeLayout
