@@ -23,15 +23,13 @@
             >
 
 
-
             <ImageView
                 android:id="@+id/dialoge_img"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_70sdp"
-                android:src="@drawable/place_holder"
-                android:layout_marginTop="-12dp"
                 android:layout_gravity="center_horizontal"
-                />
+                android:layout_marginTop="-12dp"
+                android:src="@drawable/place_holder" />
 
 
             <LinearLayout

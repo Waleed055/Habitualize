@@ -67,4 +67,18 @@ dependencies {
     // Fab Menu
     implementation 'com.github.imangazalievm:circlemenu:3.0.0'
 
+    //open task effect
+    implementation 'tyrantgit:explosionfield:1.0.1'
+
+    // material editText
+    implementation 'com.google.android.material:material:1.6.1'
+
+    //emoji picker
+    implementation "com.vanniktech:emoji-google:0.15.0"
+
+    //circular image view
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //double click listener
+//    implementation 'com.github.pedromassango:doubleClick:3.0'
 }

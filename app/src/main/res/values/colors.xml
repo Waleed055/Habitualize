@@ -18,4 +18,6 @@
     <color name="gray">#EAE9FB</color>
     <color name="light_theme_bold">#565510</color>
     <color name="light">#CFCEA3</color>
+    <color name="text_grey">#929292</color>
+    <color name="light_grey">#E0E0E0</color>
 </resources>

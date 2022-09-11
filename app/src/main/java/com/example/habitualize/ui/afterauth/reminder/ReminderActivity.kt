@@ -3,7 +3,6 @@ package com.example.habitualize.ui.afterauth.reminder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.habitualize.R
-import com.example.habitualize.databinding.ActivityFeedBinding
 import com.example.habitualize.databinding.ActivityReminderBinding
 import com.example.habitualize.ui.afterauth.reminder.adapter.ReminderAdapter
 

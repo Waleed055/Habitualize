@@ -2,12 +2,12 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/task_parent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/theme"
     android:orientation="vertical"
-    android:id="@+id/task_parent"
-    tools:context=".ui.afterauth.home.fragments.taskfragment.TaskFragment">
+    tools:context=".ui.afterauth.home.TaskFragment">
 
 
     <LinearLayout
@@ -31,28 +31,23 @@
                 android:src="@drawable/menu_icon" />
 
             <com.google.android.material.card.MaterialCardView
-                android:layout_width="@dimen/_50sdp"
-                android:layout_height="@dimen/_50sdp"
+                android:id="@+id/premium_button"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
                 android:layout_alignParentEnd="true"
-                android:layout_margin="@dimen/_5sdp"
+                android:layout_margin="@dimen/_7sdp"
                 app:cardBackgroundColor="@color/theme"
-                app:cardCornerRadius="@dimen/_25sdp"
-                app:cardElevation="@dimen/_8sdp">
+                app:cardCornerRadius="@dimen/_15sdp"
+                app:cardElevation="@dimen/_5sdp"
+                app:strokeWidth="@dimen/_1sdp"
+                android:layout_centerVertical="true"
+                app:strokeColor="#D2AF26">
 
                 <ImageView
-                    android:layout_width="@dimen/_20sdp"
-                    android:layout_height="@dimen/_20sdp"
+                    android:layout_width="@dimen/_13sdp"
+                    android:layout_height="@dimen/_13sdp"
                     android:layout_gravity="center"
-                    android:src="@drawable/coin_icon" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:layout_marginBottom="@dimen/_2sdp"
-                    android:text="20"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_9sdp" />
+                    android:src="@drawable/premium_icon" />
             </com.google.android.material.card.MaterialCardView>
 
 
@@ -71,43 +66,52 @@
                 android:fontFamily="@font/montserrat_regular"
                 android:text="Hi Kashif!"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_24sdp" />
+                android:textSize="@dimen/_18sdp" />
 
 
             <TextView
                 android:layout_width="@dimen/_195sdp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_3sdp"
                 android:fontFamily="@font/montserrat_regular"
                 android:text="Remember that life's greatest lessons are usually learned from worst times and from the worst mistakes."
                 android:textColor="@color/white"
-                android:textSize="@dimen/_12sdp" />
+                android:textSize="@dimen/_10sdp" />
 
         </LinearLayout>
 
-
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:background="@drawable/task_rv_background">
+            android:layout_height="match_parent">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/task_rv"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginHorizontal="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_10sdp"
-                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                app:spanCount="2"
-                tools:listitem="@layout/item_task" />
+                android:background="@drawable/task_rv_background">
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/home_bg_gif" />
 
 
-        </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/task_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2"
+                    tools:listitem="@layout/item_task" />
 
+
+            </RelativeLayout>
+
+        </RelativeLayout>
     </LinearLayout>
-
-
 
 
 </FrameLayout>

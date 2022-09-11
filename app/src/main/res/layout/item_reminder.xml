@@ -11,7 +11,7 @@
         app:cardBackgroundColor="#E8EEF3"
         app:cardCornerRadius="@dimen/_15sdp"
         android:layout_margin="@dimen/_5sdp"
-        app:cardElevation="@dimen/_10sdp"
+        app:cardElevation="@dimen/_5sdp"
         app:strokeWidth="@dimen/_1sdp"
         app:strokeColor="#D7DDEA"
         >

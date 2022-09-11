@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.habitualize.R
+import com.example.habitualize.ui.beforeauth.authscreens.SignUpActivity
 import com.example.habitualize.ui.beforeauth.introscreens.IntroActivity
 
 class SplashActivity : AppCompatActivity() {
@@ -17,7 +18,7 @@ class SplashActivity : AppCompatActivity() {
                 try {
 
                     sleep(2000)
-                    val intent = Intent(this@SplashActivity, IntroActivity::class.java)
+                    val intent = Intent(this@SplashActivity, SignUpActivity::class.java)
                     startActivity(intent)
                     finish()
 

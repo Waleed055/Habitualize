@@ -1,26 +1,19 @@
 package com.example.habitualize.ui.afterauth.home
 
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
-import androidx.navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.habitualize.R
 import com.example.habitualize.databinding.ActivityHomeBinding
-import com.example.habitualize.ui.afterauth.home.fragments.ChatFragment
-import com.example.habitualize.ui.afterauth.home.fragments.ProfileFragment
-import com.example.habitualize.ui.afterauth.home.fragments.taskfragment.TaskFragment
-import com.google.android.material.navigation.NavigationView
-import com.google.android.material.snackbar.Snackbar
-import com.zagori.bottomnavbar.BottomNavBar
+import com.example.habitualize.ui.afterauth.communitychallenges.CommunityChallengesActivity
+import com.example.habitualize.ui.afterauth.challenge.ChallengeActivity
+import com.example.habitualize.ui.afterauth.feed.FeedActivity
+import com.example.habitualize.ui.afterauth.notification.NotificationActivity
+import com.example.habitualize.ui.afterauth.premium.PremiumActivity
+import com.example.habitualize.ui.afterauth.profile.ProfileActivity
+import com.example.habitualize.ui.afterauth.reminder.ReminderActivity
 
 
 class HomeActivity : AppCompatActivity() {
@@ -53,23 +46,32 @@ class HomeActivity : AppCompatActivity() {
 
         binding.navView.setNavigationItemSelectedListener {
             when (it.itemId) {
+                R.id.nav_premium -> {
+                    startActivity(Intent(this,PremiumActivity::class.java))
+                }
                 R.id.nav_blog -> {
 
                 }
+                R.id.nav_notification -> {
+                    startActivity(Intent(this,NotificationActivity::class.java))
+                }
                 R.id.nav_community -> {
-
+                    startActivity(Intent(this, CommunityChallengesActivity::class.java))
                 }
                 R.id.nav_share_with_friend -> {
-
+                    val intent = Intent(Intent.ACTION_SEND)
+                    intent.type = "text/plain"
+                    intent.putExtra(Intent.EXTRA_TEXT, "Check this out! Habitulizer is an amazing app: [this will be playStore link]")
+                    startActivity(Intent.createChooser(intent, "choose one"))
                 }
                 R.id.nav_reminder -> {
-
+                    startActivity(Intent(this,ReminderActivity::class.java))
                 }
                 R.id.nav_contact_us -> {
 
                 }
                 R.id.nav_log_out -> {
-
+                    finish()
                 }
             }
             true
@@ -84,21 +86,19 @@ class HomeActivity : AppCompatActivity() {
         binding.includedLayout.bottomNavigationView.setOnItemSelectedListener { menuItem ->
             when(menuItem.itemId){
                 R.id.nav_feed -> {
-                    setCurrentFragment(ChatFragment())
+                    startActivity(Intent(this,FeedActivity::class.java))
                 }
-                R.id.nav_add_task -> {
-
-                }
+                R.id.nav_add_task -> {}
                 R.id.nav_profile -> {
-                    setCurrentFragment(ProfileFragment())
+                    startActivity(Intent(this,ProfileActivity::class.java))
                 }
             }
             true
         }
 
         binding.includedLayout.fab.setOnClickListener { view ->
-            setCurrentFragment(TaskFragment())
             binding.includedLayout.bottomNavigationView.menu.setGroupCheckable(0, false, true)
+            startActivity(Intent(this,ChallengeActivity::class.java))
         }
     }
 

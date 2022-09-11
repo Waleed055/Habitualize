@@ -82,6 +82,7 @@ class IntroActivity : AppCompatActivity() {
                 2->
                 {
                     startActivity(Intent(this,HomeActivity::class.java))
+                    finish()
                 }
             }
         }

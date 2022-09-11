@@ -14,7 +14,7 @@
     <RelativeLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_40sdp">
+        android:layout_height="@dimen/_60sdp">
 
         <ImageView
             android:id="@+id/back_button"
@@ -33,7 +33,7 @@
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_toEndOf="@id/back_button"
             android:fontFamily="@font/poppins_medium"
-            android:text="Notifications"
+            android:text="Feed"
             android:textColor="@color/white"
             android:textSize="@dimen/_14sdp" />
 
@@ -45,11 +45,10 @@
                 android:layout_height="@dimen/_18sdp"
                 android:layout_gravity="center"
                 android:layout_alignParentEnd="true"
-                android:layout_margin="@dimen/_5sdp"
                 android:src="@drawable/heart"
                 app:tint="@color/white"
                 android:layout_centerVertical="true"
-                />
+                android:layout_marginEnd="@dimen/_20sdp"/>
 
 
 
@@ -70,8 +69,7 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:orientation="vertical"
             tools:listitem="@layout/item_feed"
-            android:layout_marginTop="@dimen/_10sdp"
-            />
+            android:layout_marginTop="@dimen/_30sdp" />
 
     </FrameLayout>
 

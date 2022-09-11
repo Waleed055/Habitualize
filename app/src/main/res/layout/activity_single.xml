@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/theme"
@@ -31,7 +32,7 @@
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_toEndOf="@id/back_button"
             android:fontFamily="@font/poppins_medium"
-            android:text="Notifications"
+            android:text="Day n"
             android:textColor="@color/white"
             android:textSize="@dimen/_14sdp" />
 
@@ -64,78 +65,118 @@
 
     </RelativeLayout>
 
-    <FrameLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/notification_included_layout"
         android:layout_marginTop="@dimen/_5sdp"
         android:background="@drawable/task_rv_background">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:layout_marginHorizontal="@dimen/_20sdp"
-            >
-
-
-        <TextView
+        <androidx.cardview.widget.CardView
+            android:id="@+id/challenge_card"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/inter_bold"
-            android:text="💡 Scrape the atea below to see today’s mission"
-            android:textColor="@color/bold_text_color"
-            android:textSize="@dimen/_26sdp" />
-
+            android:layout_height="@dimen/_200sdp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_60sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:elevation="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_5sdp">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="If you forget to brush your teeth during the day and you have difficulty in continuing this habit, add daily reminders to your phone or add brushing to your list if you have a to do list."
-                android:textColor="@color/small_text_color"
-                android:fontFamily="@font/inter_regular"
-                android:textSize="@dimen/_14sdp"
+                android:id="@+id/challenge_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
                 android:layout_marginTop="@dimen/_5sdp"
-                />
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:padding="@dimen/_15sdp"
+                android:text="If you forget to brush your teeth during the day and you have difficulty in continuing this habit, add daily reminders to your phone or add brushing to your list if you have a to do list."
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp" />
 
-        </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/break_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@color/theme_light"
+                android:elevation="@dimen/_2sdp">
 
-        <LinearLayout
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Tap to see Today's challenge"
+                    android:textSize="@dimen/_15sdp"
+                    android:layout_margin="@dimen/_20sdp"
+                    android:gravity="center"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/share_card"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_45sdp"
-            android:background="@drawable/background_next_btn"
-            android:layout_marginHorizontal="@dimen/_25sdp"
-            android:gravity="center"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="@dimen/_20sdp"
-            >
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@id/challenge_card"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/background_next_btn">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:text="Complete the task"
-                android:fontFamily="@font/inter_semi_bold"
-                android:textSize="@dimen/_12sdp"
                 android:layout_centerInParent="true"
-             android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="Share"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11sdp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/complete_task_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@id/share_card"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:background="@drawable/background_next_btn"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/task_complete_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/inter_semi_bold"
                 android:gravity="center"
-                android:layout_weight="5"
-                />
+                android:text="Complete the task to earn 10"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11sdp"
+                android:layout_centerInParent="true"/>
 
             <ImageView
                 android:layout_width="@dimen/_12sdp"
                 android:layout_height="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:src="@drawable/coin_icon"
+                android:layout_toEndOf="@id/task_complete_text"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_10sdp"
                 android:src="@drawable/tick_icon"
-                android:layout_weight="1"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                />
+                android:visibility="gone"/>
 
-        </LinearLayout>
+        </RelativeLayout>
 
-    </FrameLayout>
+    </RelativeLayout>
 
 
 </LinearLayout>

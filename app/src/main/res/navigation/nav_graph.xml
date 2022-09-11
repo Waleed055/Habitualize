@@ -17,7 +17,7 @@
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/taskFragment"
-        android:name="com.example.habitualize.ui.afterauth.home.fragments.taskfragment.TaskFragment"
+        android:name="com.example.habitualize.ui.afterauth.home.TaskFragment"
         android:label="fragment_task"
         tools:layout="@layout/fragment_task" />
 </navigation>
