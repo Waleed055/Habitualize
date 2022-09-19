@@ -65,6 +65,8 @@
         <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/drawable/item_confirmation_dialouge.xml" value="0.14" />
         <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/drawable/item_task_background.xml" value="0.14" />
         <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/drawable/task_rv_background.xml" value="0.14" />
+        <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/layout/activity_feed.xml" value="0.20102564102564102" />
+        <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/layout/activity_feed_detail.xml" value="0.20416666666666666" />
         <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/layout/activity_intro.xml" value="0.22" />
         <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/layout/activity_sign_up.xml" value="0.2" />
@@ -73,7 +75,11 @@
         <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/layout/fragment_chat.xml" value="0.19010416666666666" />
         <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/layout/fragment_profile.xml" value="0.19010416666666666" />
         <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/layout/fragment_task.xml" value="0.2" />
+        <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/layout/item_comment.xml" value="0.20416666666666666" />
         <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/layout/item_confirmation_dialouge.xml" value="0.203125" />
+        <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/layout/item_feed.xml" value="0.20416666666666666" />
+        <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/layout/item_gift.xml" value="0.25" />
+        <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/layout/item_gift_bottom_sheet.xml" value="0.20416666666666666" />
         <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/layout/item_intro_gif.xml" value="0.1693840579710145" />
         <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/layout/item_task.xml" value="0.20416666666666666" />
         <entry key="..\:/GitHubProjects/Habitualize/app/src/main/res/layout/item_task_complete_dialouge.xml" value="0.20416666666666666" />

@@ -13,4 +13,15 @@
         <item name="android:colorForeground">@color/theme
         </item>
     </style>
+
+
+    <style name="BottomSheetDailougeTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/ShapeAppearanceOverlay.Demo</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.Demo" parent="">
+        <item name="cornerSize">8dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
 </resources>
