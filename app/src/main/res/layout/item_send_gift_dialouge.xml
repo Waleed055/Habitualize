@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false">
+    <FrameLayout
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="@dimen/_170sdp"
+        android:layout_centerInParent="true"
+        android:clipChildren="false"
+        android:background="@drawable/gernal_dialouge_background"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:elevation="@dimen/_5sdp">
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/dialoge_img"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="-12dp"/>
+
+            <TextView
+                android:id="@+id/tv_gift_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/ll_confirm_btn"
+                android:layout_below="@+id/dialoge_img"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:textColor="@color/bold_text_color"
+                android:textSize="@dimen/_12sdp" />
+
+            <LinearLayout
+                android:id="@+id/ll_confirm_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/background_next_btn"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/coin_icon"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="@dimen/_5sdp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_35sdp"
+                    android:elevation="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="@dimen/_12sdp"
+                    android:text="25 coins"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+</RelativeLayout>

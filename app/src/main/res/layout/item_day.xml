@@ -9,9 +9,7 @@
         android:id="@+id/outlinedTextField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Day n"
-        app:boxStrokeColor="@color/theme"
-        app:hintTextColor="@color/theme"
+        android:hint="@string/day"
         android:layout_marginHorizontal="@dimen/_10sdp"
         android:layout_marginVertical="@dimen/_5sdp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -21,7 +19,8 @@
             android:id="@+id/challenge_text_input_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/theme"/>
+            android:textColor="@color/theme_black"
+            android:background="@drawable/edit_text_background"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 

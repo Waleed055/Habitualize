@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="wrap_content">
 
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
         android:layout_width="@dimen/_65sdp"
         android:layout_height="@dimen/_65sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
         app:cardBackgroundColor="#E8EEF3"
         app:cardCornerRadius="@dimen/_15sdp"
-        android:layout_margin="@dimen/_5sdp"
-        app:cardElevation="@dimen/_5sdp"
-        app:strokeWidth="@dimen/_1sdp"
-        app:strokeColor="#D7DDEA"
-        >
+        app:cardElevation="@dimen/_2sdp">
 
-<ImageView
-    android:id="@+id/item_lock_img"
-    android:layout_width="@dimen/_35sdp"
-    android:layout_height="@dimen/_35sdp"
-    android:src="@drawable/lock_icon"
-    android:layout_gravity="center"
-    />
+        <ImageView
+            android:id="@+id/item_lock_img"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/lock_icon" />
 
         <TextView
             android:id="@+id/item_reminder_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="I hope you feel beautiful today"
-            android:textSize="@dimen/_8sdp"
             android:layout_gravity="center"
+            android:maxLines="4"
+            android:text="I hope you feel beautiful today I hope you feel beautiful today I hope you feel beautiful today I hope you feel beautiful today I hope you feel beautiful today "
             android:textAlignment="center"
-            android:visibility="gone"
-
-            />
+            android:textSize="@dimen/_8sdp"
+            android:textColor="@color/theme_black"
+            android:visibility="gone" />
 
 
     </com.google.android.material.card.MaterialCardView>

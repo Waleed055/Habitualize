@@ -4,6 +4,7 @@
     package="com.example.habitualize">
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -11,60 +12,123 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_foreground"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Habitualize"
+        android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
-            android:name=".FeedDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.afterauth.communitychallenges.communitychallengedetail.CommunityChallengeDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.afterauth.communitychallenges.CommunityChallengesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.afterauth.premium.PremiumActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.afterauth.profile.ProfileActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.afterauth.reminder.ReminderActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.afterauth.feed.FeedActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.afterauth.singleday.SingleDayActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.afterauth.challenge.ChallengeActivity"
+            android:name=".ui.hidentask.hiddentaskdetail.HiddenTaskDetailActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan|adjustResize" />
+            android:screenOrientation="portrait"  />
         <activity
-            android:name=".ui.afterauth.taskschedule.TaskSchedule"
-            android:exported="false" />
+            android:name=".ui.hidentask.HiddenTaskActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.afterauth.notification.NotificationActivity"
-            android:exported="true" />
+            android:name=".ui.privacypolicy.PrivacyPolicyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.afterauth.home.HomeActivity"
-            android:exported="true" />
+            android:name=".ui.theme.SelectThemeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.beforeauth.introscreens.IntroActivity"
-            android:exported="false" />
+            android:name=".ui.selectlanguage.SelectLanguageActivity"
+            android:exported="false"
+            android:label="@string/title_activity_select_language"
+            android:screenOrientation="portrait"  />
         <activity
-            android:name=".ui.beforeauth.authscreens.SignUpActivity"
-            android:exported="false" />
+            android:name="com.example.habitualize.ui.apptasks.AppTasksActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"  />
         <activity
-            android:name=".ui.beforeauth.splash.SplashActivity"
-            android:exported="true">
+            android:name="com.example.habitualize.ui.auth.login.LoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"  />
+        <activity
+            android:name="com.example.habitualize.ui.feed.createfeed.CreateFeedActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"  />
+        <activity
+            android:name="com.example.habitualize.ui.gratitude.GratitudeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.habitualize.ui.feed.feeddetail.FeedDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.habitualize.ui.communitychallenges.communitychallengedetail.CommunityChallengeDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.habitualize.ui.communitychallenges.CommunityChallengesActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.habitualize.ui.premium.PremiumActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.habitualize.ui.profile.ProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.habitualize.ui.reminder.ReminderActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"  />
+        <activity
+            android:name="com.example.habitualize.ui.feed.FeedActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"  />
+        <activity
+            android:name="com.example.habitualize.ui.home.taskdetail.singleday.SingleDayActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.habitualize.ui.challenge.ChallengeActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan|adjustResize"
+            android:screenOrientation="portrait"  />
+        <activity
+            android:name="com.example.habitualize.ui.home.taskdetail.TaskDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"  />
+        <activity
+            android:name="com.example.habitualize.ui.notification.NotificationActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"  />
+        <activity
+            android:name="com.example.habitualize.ui.home.HomeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.habitualize.ui.introscreens.IntroActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.habitualize.ui.auth.signup.SignUpActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"  />
+        <activity
+            android:name="com.example.habitualize.ui.splash.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/app_id" />
+
+        <receiver
+            android:name=".broadcast.AlarmReceiver"
+            android:configChanges="orientation"
+            android:enabled="true"
+            android:exported="false"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

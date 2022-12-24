@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/theme"
-    tools:context=".ui.afterauth.feed.FeedActivity">
+    android:id="@+id/root"
+    tools:context=".ui.feed.FeedActivity">
 
 
 
@@ -24,7 +25,8 @@
             android:layout_marginStart="@dimen/_10sdp"
             android:padding="@dimen/_7sdp"
             android:rotation="180"
-            android:src="@drawable/icon_forward" />
+            android:src="@drawable/icon_forward"
+            app:tint="@color/theme_white"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -33,45 +35,79 @@
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_toEndOf="@id/back_button"
             android:fontFamily="@font/poppins_medium"
-            android:text="Feed"
-            android:textColor="@color/white"
+            android:text="@string/feed"
+            android:textColor="@color/theme_white"
             android:textSize="@dimen/_14sdp" />
 
 
-
-
-            <ImageView
-                android:layout_width="@dimen/_18sdp"
-                android:layout_height="@dimen/_18sdp"
-                android:layout_gravity="center"
-                android:layout_alignParentEnd="true"
-                android:src="@drawable/heart"
-                app:tint="@color/white"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="@dimen/_20sdp"/>
+        <ImageView
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:src="@drawable/heart"
+            app:tint="@color/theme_white"
+            android:visibility="gone"/>
 
 
 
 
     </RelativeLayout>
 
-    <FrameLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/notification_included_layout"
         android:layout_marginTop="@dimen/_5sdp"
         android:background="@drawable/task_rv_background">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/feed_rv"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            android:orientation="vertical"
-            tools:listitem="@layout/item_feed"
-            android:layout_marginTop="@dimen/_30sdp" />
+            android:layout_height="match_parent"
+            android:id="@+id/data_layout"
+            android:visibility="gone">
 
-    </FrameLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/feed_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_feed" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_add_btn"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_30sdp"
+                app:cardBackgroundColor="@color/theme"
+                app:cardCornerRadius="@dimen/_20sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_13sdp"
+                    android:layout_height="@dimen/_13sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/task_icon"
+                    app:tint="@color/theme_white"/>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view"
+            android:layout_width="@dimen/_300sdp"
+            android:layout_height="@dimen/_300sdp"
+            android:layout_centerInParent="true"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/empty_list_gif"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
 
 
 </LinearLayout>

@@ -2,10 +2,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/theme"
-    tools:context=".ui.afterauth.communitychallenges.CommunityChallengesActivity">
+    tools:context=".ui.communitychallenges.CommunityChallengesActivity">
 
     <RelativeLayout
         android:id="@+id/header"
@@ -16,84 +17,110 @@
             android:id="@+id/back_button"
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
-            android:src="@drawable/icon_forward"
-            android:rotation="180"
-            android:padding="@dimen/_7sdp"
             android:layout_centerVertical="true"
-            android:layout_marginStart="@dimen/_10sdp"/>
+            android:layout_marginStart="@dimen/_10sdp"
+            android:padding="@dimen/_7sdp"
+            android:rotation="180"
+            android:src="@drawable/icon_forward"
+            app:tint="@color/theme_white" />
 
         <TextView
+            android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Title"
-            android:fontFamily="@font/poppins_medium"
-            android:textSize="@dimen/_14sdp"
-            android:textColor="@color/white"
-            android:layout_toEndOf="@id/back_button"
             android:layout_centerVertical="true"
-            android:layout_marginStart="@dimen/_10sdp"/>
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@id/back_button"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Title"
+            android:textColor="@color/theme_white"
+            android:textSize="@dimen/_14sdp" />
 
         <LinearLayout
             android:id="@+id/create_challenge_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal"
             android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
             android:layout_marginEnd="@dimen/_20sdp"
-            android:layout_centerVertical="true">
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
             <ImageView
                 android:layout_width="@dimen/_20sdp"
                 android:layout_height="@dimen/_20sdp"
-                android:src="@drawable/ic_plus"/>
+                android:src="@drawable/ic_plus"
+                app:tint="@color/theme_white" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Create\nChallenge"
                 android:fontFamily="@font/montserrat_regular"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_6sdp"
-                android:gravity="center_horizontal"/>
+                android:gravity="center_horizontal"
+                android:text="@string/create_nchallenge"
+                android:textColor="@color/theme_white"
+                android:textSize="@dimen/_6sdp" />
         </LinearLayout>
 
     </RelativeLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/header"
-        android:background="@drawable/task_rv_background"
-        android:elevation="@dimen/_2sdp"
-        android:orientation="vertical">
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:gravity="center_vertical"
-            android:background="@color/light_grey"
-            android:layout_gravity="center_horizontal">
-            <ImageView
-                android:layout_width="@dimen/_10sdp"
-                android:layout_height="@dimen/_10sdp"
-                android:src="@drawable/error_icon"
-                android:layout_marginStart="@dimen/_9sdp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Challenges created by the Community."
-                android:fontFamily="@font/montserrat_regular"
-                android:textSize="@dimen/_8sdp"
-                android:textColor="@color/text_grey"
-                android:layout_marginHorizontal="@dimen/_10sdp"/>
-        </LinearLayout>
+        android:background="@drawable/task_rv_background">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/community_challenge_recyclerview"
+        <LinearLayout
+            android:id="@+id/data_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/_5sdp"
-            tools:listitem="@layout/item_community_challenges"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+            android:elevation="@dimen/_2sdp"
+            android:orientation="vertical"
+            android:visibility="gone">
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/light_grey"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_9sdp"
+                    android:src="@drawable/error_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="@string/challenges_created_by_the_community"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/_8sdp" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/community_challenge_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_community_challenges" />
+
+        </LinearLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view"
+            android:layout_width="@dimen/_300sdp"
+            android:layout_height="@dimen/_300sdp"
+            android:layout_centerInParent="true"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/empty_list_gif"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
 </RelativeLayout>

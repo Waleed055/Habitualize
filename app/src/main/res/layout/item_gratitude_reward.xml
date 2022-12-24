@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/theme_white">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_min="@dimen/_20sdp"
+        app:layout_constraintHeight_max="@dimen/_85sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginVertical="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="@dimen/_2sdp"
+        app:cardBackgroundColor="@color/light_black">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/iv_notification_icon"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:src="@drawable/coin_icon" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/iv_notification_icon"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_toStartOf="@+id/relative_layout"
+                android:layout_toEndOf="@id/iv_notification_icon"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:maxLines="4"
+                android:textColor="@color/theme_black"
+                android:textSize="@dimen/_10sdp" />
+
+            <RelativeLayout
+                android:id="@+id/relative_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_10sdp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/rl_earn_reward"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_centerInParent="true"
+                    app:cardCornerRadius="@dimen/_18sdp"
+                    app:cardElevation="0dp"
+                    android:visibility="gone">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_9sdp"
+                        android:text="Earn"
+                        android:textColor="@color/theme_black"
+                        android:layout_gravity="center"/>
+                </androidx.cardview.widget.CardView>
+
+                <RelativeLayout
+                    android:id="@+id/rl_progress"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_centerInParent="true">
+
+                    <me.tankery.lib.circularseekbar.CircularSeekBar
+                        android:id="@+id/cb_completed_tasks"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cs_circle_color="@color/theme_light"
+                        app:cs_circle_progress_color="@color/theme"
+                        app:cs_circle_stroke_width="@dimen/_3sdp"
+                        app:cs_circle_style="round"
+                        app:cs_lock_enabled="true"
+                        app:cs_progress="50" />
+
+                    <TextView
+                        android:id="@+id/tv_total_completed_tasks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="20/50"
+                        android:textColor="@color/theme"
+                        android:textSize="@dimen/_6sdp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

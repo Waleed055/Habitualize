@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme"
+    android:orientation="vertical"
+    tools:context=".ui.hidentask.hiddentaskdetail.HiddenTaskDetailActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp">
+
+            <ImageView
+                android:id="@+id/back_button"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:padding="@dimen/_7sdp"
+                android:rotation="180"
+                android:src="@drawable/icon_forward"
+                app:tint="@color/theme_white"/>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_toEndOf="@id/back_button"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:maxLines="1"
+                android:textColor="@color/theme_white"
+                android:textSize="@dimen/_14sdp" />
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_challenge_emoji"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_challenge_emoji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/_60sdp"
+            android:textColor="@color/theme_black"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/challenge_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:gravity="center"
+            android:inputType="textMultiLine"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/theme_white"
+            android:textSize="@dimen/_10sdp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@drawable/task_rv_background">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/home_bg_gif"
+            android:scaleType="fitXY"
+            android:layout_marginTop="@dimen/_50sdp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/task_rv_background">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_230sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_50sdp"
+                app:cardBackgroundColor="@color/light_black"
+                app:cardCornerRadius="@dimen/_20sdp"
+                app:cardElevation="@dimen/_5sdp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/task_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="7"
+                    tools:itemCount="30"
+                    tools:listitem="@layout/item_challenge" />
+            </androidx.cardview.widget.CardView>
+
+            <com.imangazaliev.circlemenu.CircleMenu
+                android:id="@+id/circle_menu_un_hide"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="40dp"
+                android:src="@drawable/menu_icon"
+                app:buttonColors="@array/colors_un_hide"
+                app:buttonIcons="@array/icons_un_hide"
+                app:maxAngle="70"
+                app:rippleColor="@color/theme" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

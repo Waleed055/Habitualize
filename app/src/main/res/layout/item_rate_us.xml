@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipChildren="false">
+
+    <FrameLayout
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="@dimen/_190sdp"
+        android:layout_centerInParent="true"
+        android:clipChildren="false"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:background="@drawable/gernal_dialouge_background"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:elevation="@dimen/_5sdp">
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivCancelIcon"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/ic_cancel_icon"
+                app:tint="@color/theme"
+                android:padding="@dimen/_3sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:elevation="@dimen/_5sdp"/>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animation_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/cvRateUsBtn"
+                android:layout_centerInParent="true"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/rate_us_gif" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvRateUsBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                app:cardBackgroundColor="@color/theme"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="@dimen/_5sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/rate_us"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp" />
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+</RelativeLayout>

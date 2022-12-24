@@ -5,36 +5,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cv_root"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_15sdp"
         android:layout_marginVertical="@dimen/_5sdp"
+        app:cardBackgroundColor="@color/theme_light"
         app:cardCornerRadius="@dimen/_5sdp"
-        app:cardElevation="@dimen/_3sdp"
-        app:cardBackgroundColor="@color/theme_light">
+        app:cardElevation="@dimen/_3sdp">
 
         <TextView
             android:id="@+id/challenge_day"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Day n"
-            android:fontFamily="@font/montserrat_semi_bold"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_11sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
             android:layout_marginVertical="@dimen/_20sdp"
-            android:layout_marginHorizontal="@dimen/_10sdp"/>
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="Day n"
+            android:textColor="@color/theme_black"
+            android:textSize="@dimen/_11sdp" />
 
         <TextView
             android:id="@+id/challenge_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Drink 40 Liter water a day, for good health"
-            android:fontFamily="@font/montserrat_regular"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_11sdp"
             android:layout_marginVertical="@dimen/_20sdp"
             android:layout_marginStart="@dimen/_55sdp"
-            android:layout_marginEnd="@dimen/_10sdp"/>
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/theme_black"
+            android:textSize="@dimen/_11sdp" />
 
     </androidx.cardview.widget.CardView>
 

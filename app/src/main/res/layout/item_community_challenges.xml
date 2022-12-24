@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/theme_white">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -10,7 +11,8 @@
         android:layout_marginHorizontal="@dimen/_15sdp"
         android:layout_marginVertical="@dimen/_5sdp"
         app:cardCornerRadius="@dimen/_5sdp"
-        app:cardElevation="@dimen/_3sdp">
+        app:cardElevation="@dimen/_3sdp"
+        app:cardBackgroundColor="@color/light_black">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -22,21 +24,21 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:text="😍"
-                android:textColor="@color/black"
+                android:textColor="@color/theme_black"
                 android:textSize="@dimen/_18sdp" />
 
             <TextView
                 android:id="@+id/challenge_title"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_toEndOf="@id/challenge_icon"
                 android:layout_toStartOf="@id/like_layout"
-                android:text="Challenge Title"
+                android:layout_toEndOf="@id/challenge_icon"
+                android:fontFamily="@font/montserrat_regular"
                 android:gravity="center_vertical"
                 android:padding="@dimen/_10sdp"
-                android:fontFamily="@font/montserrat_regular"
-                android:textSize="@dimen/_11sdp"
-                android:textColor="@color/black"/>
+                android:text="Challenge Title"
+                android:textColor="@color/theme_black"
+                android:textSize="@dimen/_11sdp" />
 
             <LinearLayout
                 android:id="@+id/like_layout"
@@ -50,7 +52,8 @@
                     android:layout_height="@dimen/_15sdp"
                     android:src="@drawable/heart"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="@dimen/_5sdp"/>
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:tint="@color/theme"/>
                 <TextView
                     android:id="@+id/like_count"
                     android:layout_width="wrap_content"
@@ -68,11 +71,13 @@
                 android:layout_height="match_parent"
                 android:layout_alignParentEnd="true"
                 android:background="@color/theme">
+
                 <ImageView
                     android:layout_width="@dimen/_15sdp"
                     android:layout_height="@dimen/_15sdp"
+                    android:layout_centerInParent="true"
                     android:src="@drawable/arrow_forward"
-                    android:layout_centerInParent="true"/>
+                    app:tint="@color/theme_white"/>
             </RelativeLayout>
 
         </RelativeLayout>

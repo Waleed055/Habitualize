@@ -5,35 +5,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.afterauth.premium.PremiumActivity"
-    android:background="@color/theme">
+    tools:context=".ui.premium.PremiumActivity"
+    android:background="@color/theme"
+    android:id="@+id/root">
 
     <include
-        android:id="@+id/notification_included_layout"
+        android:id="@+id/included_layout"
         layout="@layout/header_layout" />
 
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/notification_included_layout"
-        android:background="@drawable/task_rv_background"
-        android:elevation="@dimen/_2sdp">
+        android:layout_below="@id/included_layout"
+        android:background="@drawable/task_rv_background">
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/task_rv_background">
+            android:layout_above="@+id/terms_and_conditions">
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <pl.droidsonroids.gif.GifImageView
                     android:id="@+id/notification_gif_layout"
-                    android:layout_width="@dimen/_180sdp"
-                    android:layout_height="@dimen/_160sdp"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_120sdp"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
                     android:src="@drawable/premium_gif" />
 
                 <View
@@ -42,7 +42,7 @@
                     android:layout_height="@dimen/_1sdp"
                     android:layout_below="@id/notification_gif_layout"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:background="@color/gray" />
+                    android:background="@color/hint_color" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -52,18 +52,48 @@
                     android:layout_marginTop="@dimen/_15sdp"
                     android:orientation="vertical">
 
+                    <TextView
+                        android:id="@+id/tv_onboarding"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="@string/full_access"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_18sdp"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_free_try"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:scrollbars="vertical"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:text="@string/enjoy_a_3_day_free_trial_then_week"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_9sdp"
+                        android:visibility="visible" />
+
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_60sdp"
+                        android:layout_height="@dimen/_40sdp"
                         android:gravity="center_vertical"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
                         android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
-                            android:layout_width="@dimen/_45sdp"
-                            android:layout_height="@dimen/_45sdp"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
                             android:layout_marginHorizontal="@dimen/_5sdp"
                             app:cardCornerRadius="@dimen/_5sdp"
-                            app:cardElevation="@dimen/_3sdp">
+                            app:cardElevation="@dimen/_3sdp"
+                            app:cardBackgroundColor="@color/theme_white">
 
                             <ImageView
                                 android:layout_width="match_parent"
@@ -75,26 +105,29 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginStart="@dimen/_5sdp"
                             android:fontFamily="@font/montserrat_regular"
-                            android:text="No More Ads"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/_15sdp"  />
+                            android:text="@string/no_more_ads"
+                            android:textColor="@color/theme_black"
+                            android:textSize="@dimen/_10sdp" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_60sdp"
+                        android:layout_height="@dimen/_40sdp"
                         android:gravity="center_vertical"
-                        android:orientation="horizontal">
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <androidx.cardview.widget.CardView
-                            android:layout_width="@dimen/_45sdp"
-                            android:layout_height="@dimen/_45sdp"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
                             android:layout_marginHorizontal="@dimen/_5sdp"
                             app:cardCornerRadius="@dimen/_5sdp"
-                            app:cardElevation="@dimen/_3sdp">
+                            app:cardElevation="@dimen/_3sdp"
+                            app:cardBackgroundColor="@color/theme_white">
 
                             <ImageView
                                 android:layout_width="match_parent"
@@ -109,23 +142,25 @@
                             android:layout_marginStart="@dimen/_10sdp"
                             android:fontFamily="@font/montserrat_regular"
                             android:text="Free Wallpapers"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/_15sdp"  />
+                            android:textColor="@color/theme_black"
+                            android:textSize="@dimen/_10sdp" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_60sdp"
+                        android:layout_height="@dimen/_40sdp"
                         android:gravity="center_vertical"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
                         android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
-                            android:layout_width="@dimen/_45sdp"
-                            android:layout_height="@dimen/_45sdp"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
                             android:layout_marginHorizontal="@dimen/_5sdp"
                             app:cardCornerRadius="@dimen/_5sdp"
-                            app:cardElevation="@dimen/_3sdp">
+                            app:cardElevation="@dimen/_3sdp"
+                            app:cardBackgroundColor="@color/theme_white">
 
                             <ImageView
                                 android:layout_width="match_parent"
@@ -137,26 +172,28 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginStart="@dimen/_5sdp"
                             android:fontFamily="@font/montserrat_regular"
-                            android:text="Double Reward"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/_15sdp"  />
+                            android:text="@string/double_reward"
+                            android:textColor="@color/theme_black"
+                            android:textSize="@dimen/_10sdp" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_60sdp"
+                        android:layout_height="@dimen/_40sdp"
                         android:gravity="center_vertical"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
                         android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
-                            android:layout_width="@dimen/_45sdp"
-                            android:layout_height="@dimen/_45sdp"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
                             android:layout_marginHorizontal="@dimen/_5sdp"
                             app:cardCornerRadius="@dimen/_5sdp"
-                            app:cardElevation="@dimen/_3sdp">
+                            app:cardElevation="@dimen/_3sdp"
+                            app:cardBackgroundColor="@color/theme_white">
 
                             <ImageView
                                 android:layout_width="match_parent"
@@ -168,77 +205,114 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginStart="@dimen/_5sdp"
                             android:fontFamily="@font/montserrat_regular"
-                            android:text="Support Us"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/_15sdp"  />
+                            android:text="@string/support_us"
+                            android:textColor="@color/theme_black"
+                            android:textSize="@dimen/_10sdp" />
 
                     </LinearLayout>
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_free_trial_card"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_35sdp"
-                        android:layout_marginHorizontal="@dimen/_15sdp"
-                        android:layout_marginTop="@dimen/_25sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
                         app:cardBackgroundColor="@color/white"
                         app:cardCornerRadius="@dimen/_20sdp"
                         app:cardElevation="@dimen/_5sdp">
 
                         <TextView
+                            android:id="@+id/tv_free_trial"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Free Trial"
+                            android:layout_gravity="center"
                             android:fontFamily="@font/montserrat_regular"
+                            android:text="@string/free_trial"
                             android:textColor="@color/theme"
-                            android:textSize="@dimen/_15sdp"
-                            android:layout_gravity="center"/>
+                            android:textSize="@dimen/_15sdp" />
 
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_monthly_Card"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_35sdp"
-                        android:layout_marginHorizontal="@dimen/_15sdp"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_12sdp"
                         app:cardBackgroundColor="@color/theme"
                         app:cardCornerRadius="@dimen/_20sdp"
                         app:cardElevation="@dimen/_5sdp">
 
                         <TextView
+                            android:id="@+id/tv_monthly_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Monthly Package"
-                            android:fontFamily="@font/montserrat_regular"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/_15sdp"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="@string/monthly_package"
+                            android:textColor="@color/theme_white"
+                            android:textSize="@dimen/_12sdp"
+                            android:gravity="center_horizontal"/>
 
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_yearly_Card"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_35sdp"
-                        android:layout_marginHorizontal="@dimen/_15sdp"
-                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:visibility="gone"
                         app:cardBackgroundColor="@color/theme"
                         app:cardCornerRadius="@dimen/_20sdp"
-                        app:cardElevation="@dimen/_5sdp"
-                        android:layout_marginBottom="@dimen/_60sdp">
+                        app:cardElevation="@dimen/_5sdp">
 
                         <TextView
+                            android:id="@+id/tv_yearly_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Yearly Package"
-                            android:fontFamily="@font/montserrat_regular"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/_15sdp"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="@string/yearly_package"
+                            android:textColor="@color/theme_white"
+                            android:textSize="@dimen/_12sdp"
+                            android:gravity="center_horizontal"/>
 
                     </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/tv_more_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_30sdp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/more"
+                        android:textColor="@color/theme_black"
+                        android:textSize="@dimen/_13sdp" />
 
                 </LinearLayout>
             </RelativeLayout>
         </ScrollView>
+
+        <TextView
+            android:id="@+id/terms_and_conditions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center_horizontal"
+            android:text="@string/by_subscribing_you_confirm_that_you_accept_our_terms_and_conditions"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/_11sdp" />
+
     </RelativeLayout>
 </RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="icons_un_hide">
+        <item>@drawable/unhide_icon</item>
+        <item>@drawable/notification_icon_with_label</item>
+        <item>@drawable/restart_icon</item>
+
+    </array>
+    <array name="colors_un_hide">
+        <item>@color/light_grey</item>
+        <item>@color/light_grey</item>
+        <item>@color/light_grey</item>
+    </array>
+</resources>

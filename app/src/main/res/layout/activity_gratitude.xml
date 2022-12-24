@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.gratitude.GratitudeActivity"
+    android:background="@color/theme"
+    android:id="@+id/root">
+
+    <include
+        android:id="@+id/included_layout"
+        layout="@layout/header_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/included_layout"
+        android:background="@drawable/task_rv_background"
+        android:layout_above="@id/ad_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/task_rv_background"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            tools:ignore="MissingClass">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center_horizontal"
+                android:text="@string/gratitude_is_the_appreciation_if_those_wonderful_things_that_we_take_for_granted"
+                android:textColor="@color/theme_black"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="@string/scratch_and_win"
+                android:textColor="@color/theme_black"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/tv_not_available_1"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:text="@string/available_after_n24_hours"
+                android:textColor="@color/theme_black"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone" />
+
+            <com.cooltechworks.views.ScratchTextView
+                android:id="@+id/stv_scratch_card_1"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:textColor="@color/theme"
+                android:textSize="@dimen/_15sdp" />
+
+            <TextView
+                android:id="@+id/tv_not_available_2"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:text="@string/available_after_n24_hours"
+                android:textColor="@color/theme_black"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone" />
+
+            <com.cooltechworks.views.ScratchTextView
+                android:id="@+id/stv_scratch_card_2"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:textColor="@color/theme"
+                android:textSize="@dimen/_15sdp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_watch_ad_btn"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginBottom="@dimen/_50sdp"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/theme"
+                app:cardCornerRadius="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:gravity="center_vertical"
+                    android:text="@string/scratch_again"
+                    android:textColor="@color/theme_white"
+                    android:textSize="@dimen/_12sdp"
+                    app:drawableStartCompat="@drawable/ic_video_icon" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+    <FrameLayout
+        android:id="@+id/ad_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.beforeauth.splash.SplashActivity">
-
+    tools:context=".ui.splash.SplashActivity"
+    android:id="@+id/root"
+    android:background="@color/theme_white">
 
     <pl.droidsonroids.gif.GifImageView
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/gif"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp"
         android:layout_centerInParent="true"
         android:src="@drawable/splash_gif"
-        />
+        android:tint="@color/theme"/>
 
-
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gif"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/habitualizer"
+        android:textColor="@color/theme"
+        android:textSize="@dimen/_18sdp" />
 
 </RelativeLayout>

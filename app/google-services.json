@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "495142640354",
+    "project_id": "habitulize",
+    "storage_bucket": "habitulize.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:495142640354:android:d5c0ed85a8b2b8d7869cbb",
+        "android_client_info": {
+          "package_name": "com.example.habitualize"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "495142640354-b56gbu5ucg513grn79lc1ppttiscndui.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCy-9YxUDxCc8tV7jSAOLKTb6hX5VbTxUc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "495142640354-b56gbu5ucg513grn79lc1ppttiscndui.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:495142640354:android:4b3578484e53899d869cbb",
+        "android_client_info": {
+          "package_name": "com.waleed.habitualize.public"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "495142640354-b56gbu5ucg513grn79lc1ppttiscndui.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCy-9YxUDxCc8tV7jSAOLKTb6hX5VbTxUc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "495142640354-b56gbu5ucg513grn79lc1ppttiscndui.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

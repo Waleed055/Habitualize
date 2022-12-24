@@ -3,52 +3,99 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/drawable/ad_bottom_cont_round.xml" value="0.1655" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/drawable/background_forward_btn.xml" value="0.1655" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/drawable/bg_dialog_box.xml" value="0.1675" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/drawable/bg_edit_text.xml" value="0.1655" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/drawable/bg_get_reward.xml" value="0.1675" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/drawable/bg_reward_earned.xml" value="0.1675" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/drawable/comment_custom_bg.xml" value="0.1655" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/drawable/edit_text_background.xml" value="0.1655" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/drawable/edit_text_background_black.xml" value="0.162" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/drawable/error_icon.xml" value="0.1655" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/drawable/et_custom_bg.xml" value="0.166" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/drawable/fab.xml" value="0.162" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/drawable/font_button_background.xml" value="0.1655" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/drawable/gernal_dialouge_background.xml" value="0.1675" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/drawable/ic_cancel_icon.xml" value="0.1675" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/drawable/ic_video_icon.xml" value="0.1125" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/drawable/image_view_background.xml" value="0.1615" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/drawable/item_task_background.xml" value="0.1675" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/drawable/native_add_round_bg.xml" value="0.1675" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/drawable/profile_edit_text_bg.xml" value="0.1655" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/drawable/round_corners_bg.xml" value="0.1" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/drawable/save_icon.xml" value="0.1125" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/drawable/side_nav_bar.xml" value="0.1125" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/drawable/task_rv_background.xml" value="0.1615" />
-        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_challenge.xml" value="0.5" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_app_tasks.xml" value="0.1876068376068376" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_challenge.xml" value="0.2" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_community_challenge_detail.xml" value="0.2" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_community_challenges.xml" value="0.2" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_create_feed.xml" value="0.19914529914529913" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_drawer.xml" value="0.2" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_feed.xml" value="0.2" />
-        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_home.xml" value="0.1" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_feed_detail.xml" value="0.2" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_gratitude.xml" value="0.2" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_hidden_task.xml" value="0.19914529914529913" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_hidden_task_detail.xml" value="0.19914529914529913" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_home.xml" value="0.2" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_intro.xml" value="0.19914529914529913" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_login.xml" value="0.19914529914529913" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_main.xml" value="0.2546875" />
-        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_notification.xml" value="0.2" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_notification.xml" value="0.268" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_premium.xml" value="0.2" />
-        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_profile_activity.xml" value="0.268" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_privacy_policy.xml" value="0.1876068376068376" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_profile_activity.xml" value="0.132" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_reminder.xml" value="0.19914529914529913" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_select_language.xml" value="0.19914529914529913" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_select_theme.xml" value="0.2" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_sign_up.xml" value="0.2" />
-        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_single.xml" value="0.20897435897435898" />
-        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_splash.xml" value="0.2546875" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_single.xml" value="0.2" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_splash.xml" value="0.132" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_task_detail.xml" value="0.2" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/activity_task_shedule.xml" value="0.2" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/app_bar_drawer.xml" value="0.2546875" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/app_bar_main.xml" value="0.2" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/content_drawer.xml" value="0.2546875" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/content_select_language.xml" value="0.19914529914529913" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/dialog_blogs_link.xml" value="0.268" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/fragment_chat.xml" value="0.24074074074074073" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/fragment_gallery.xml" value="0.2546875" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/fragment_home.xml" value="0.2546875" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/fragment_main.xml" value="0.2" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/fragment_profile.xml" value="0.2546875" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/fragment_second.xml" value="0.19914529914529913" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/fragment_slideshow.xml" value="0.2546875" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/fragment_task.xml" value="0.2" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/header_layout.xml" value="0.2546875" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/item_challenge.xml" value="0.20897435897435898" />
-        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/item_community_challenges.xml" value="0.268" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/item_comment.xml" value="0.19914529914529913" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/item_community_challenges.xml" value="0.2" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/item_community_challenges_detail.xml" value="0.268" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/item_confirmation_dialouge.xml" value="0.2546875" />
-        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/item_day.xml" value="0.3" />
-        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/item_feed.xml" value="0.4" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/item_day.xml" value="0.2" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/item_feed.xml" value="0.268" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/item_gift.xml" value="0.19914529914529913" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/item_gift_bottom_sheet.xml" value="0.19914529914529913" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/item_given_gift.xml" value="0.132" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/item_gratitude_reward.xml" value="0.6" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/item_image_popup.xml" value="0.19914529914529913" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/item_info_reminder_dialouge.xml" value="0.268" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/item_intro_gif.xml" value="0.20897435897435898" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/item_notifications.xml" value="0.3" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/item_open_reminder_dialouge.xml" value="0.19914529914529913" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/item_rate_us.xml" value="0.2" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/item_reminder.xml" value="0.19914529914529913" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/item_send_gift_dialouge.xml" value="0.19914529914529913" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/item_task.xml" value="0.2546875" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/item_task_complete_dialouge.xml" value="0.20897435897435898" />
-        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/nav_header_drawer.xml" value="0.268" />
-        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/menu/activity_main_drawer.xml" value="0.8" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/item_themes_layout.xml" value="0.2" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/item_time_picker_dialog.xml" value="0.2" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/native_ad_layout.xml" value="0.19914529914529913" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/native_ad_without_media_layout.xml" value="0.3" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/native_banner_ad_layout.xml" value="0.19914529914529913" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/layout/nav_header_drawer.xml" value="0.2" />
+        <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/menu/activity_main_drawer.xml" value="0.2" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/menu/bottom_nav_menu.xml" value="0.11302083333333333" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/menu/drawer.xml" value="0.11302083333333333" />
         <entry key="..\:/Android/Projects/My Projects/Habitualize/app/src/main/res/xml/bottom_bar_motionscene.xml" value="0.2546875" />
@@ -94,5 +141,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1" />
+      </ProjectState>
+    </option>
   </component>
 </project>

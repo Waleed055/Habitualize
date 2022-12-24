@@ -8,9 +8,9 @@
 
     </array>
     <array name="colors">
-        <item>@color/theme</item>
-        <item>@color/theme</item>
-        <item>@color/theme</item>
+        <item>@color/light_grey</item>
+        <item>@color/light_grey</item>
+        <item>@color/light_grey</item>
     </array>
 
 </resources>

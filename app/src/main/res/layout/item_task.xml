@@ -2,17 +2,19 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:clipChildren="false">
 
-    <FrameLayout
+    <androidx.cardview.widget.CardView
+        android:id="@+id/root"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_140sdp"
         android:layout_centerInParent="true"
-        android:layout_marginHorizontal="@dimen/_10sdp"
-        android:layout_marginVertical="@dimen/_15sdp"
-        android:background="@drawable/item_task_background"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
         android:clipChildren="false"
-        android:elevation="@dimen/_5sdp">
+        android:elevation="@dimen/_3sdp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -20,36 +22,51 @@
 
 
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_70sdp"
-                android:layout_gravity="center_horizontal"
+                android:id="@+id/iv_task_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="-12dp"
-                android:src="@drawable/positive_affirmations_icon" />
+                android:visibility="gone"/>
 
+            <TextView
+                android:id="@+id/tv_challenge_emoji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-12dp"
+                android:textSize="@dimen/_60sdp"
+                android:textColor="@color/black"
+                android:visibility="gone"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_55sdp"
+                android:layout_height="@dimen/_45sdp"
                 android:layout_alignParentBottom="true"
                 android:layout_marginHorizontal="@dimen/_10sdp"
-                android:layout_marginBottom="@dimen/_5sdp">
+                android:layout_marginBottom="@dimen/_10sdp">
 
                 <TextView
-                    android:layout_width="@dimen/_80sdp"
+                    android:id="@+id/tv_task_name"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_toStartOf="@id/tv_complete_counter"
                     android:fontFamily="@font/inter_semi_bold"
-                    android:text="Positive Affirmations part2"
-                    android:textColor="@color/bold_text_color"
-                    android:textSize="@dimen/_12sdp" />
+                    android:inputType="textMultiLine"
+                    android:maxLines="3"
+                    android:textColor="@color/theme_black"
+                    android:textSize="@dimen/_11sdp" />
 
 
                 <TextView
+                    android:id="@+id/tv_complete_counter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
                     android:fontFamily="@font/inter_regular"
-                    android:text="14/30"
                     android:textColor="@color/bold_text_color"
                     android:textSize="@dimen/_10sdp" />
 
@@ -59,7 +76,7 @@
         </RelativeLayout>
 
 
-    </FrameLayout>
+    </androidx.cardview.widget.CardView>
 
 
 </RelativeLayout>

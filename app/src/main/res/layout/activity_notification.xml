@@ -5,8 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.afterauth.notification.NotificationActivity"
-    android:background="@color/theme">
+    tools:context=".ui.notification.NotificationActivity"
+    android:background="@color/theme"
+    android:id="@+id/roor">
 
     <include
         android:id="@+id/notification_included_layout"
@@ -16,66 +17,82 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/task_rv_background"
-        android:layout_below="@id/notification_included_layout">
+        android:layout_below="@id/notification_included_layout"
+        android:background="@drawable/task_rv_background">
+
         <pl.droidsonroids.gif.GifImageView
             android:id="@+id/notification_gif_layout"
             android:layout_width="@dimen/_180sdp"
             android:layout_height="@dimen/_160sdp"
-            android:src="@drawable/notification_gif"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/_10sdp"/>
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/notification_gif" />
+
         <View
             android:id="@+id/view"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_1sdp"
-            android:background="@color/gray"
             android:layout_below="@id/notification_gif_layout"
-            android:layout_marginTop="@dimen/_10sdp"/>
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/hint_color" />
+
         <RelativeLayout
+            android:id="@+id/rl_notification_allow"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_30sdp"
             android:layout_below="@id/view"
             android:layout_marginTop="@dimen/_10sdp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Notifications"
-                android:textColor="@color/black"
-                android:fontFamily="@font/poppins_semibold"
-                android:textSize="@dimen/_12sdp"
                 android:layout_centerVertical="true"
-                android:layout_marginStart="@dimen/_15sdp" />
+                android:layout_marginStart="@dimen/_15sdp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/notifications"
+                android:textColor="@color/theme_black"
+                android:textSize="@dimen/_12sdp" />
 
-            <Switch
-                android:id="@+id/fragment_profile_social_switch"
-                android:layout_width="match_parent"
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/sm_notification_switch"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
                 android:layout_marginBottom="@dimen/_5sdp"
                 android:switchMinWidth="@dimen/_42sdp"
                 android:theme="@style/SCBSwitch"
-                app:tint="@color/black" />
+                app:tint="@color/theme_black" />
         </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rl_notifications"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_notification_allow"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_notifications" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/fab_card"
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_40sdp"
-            app:cardCornerRadius="@dimen/_15sdp"
-            app:cardBackgroundColor="@color/theme"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
             android:layout_marginBottom="@dimen/_30sdp"
+            app:cardBackgroundColor="@color/theme"
+            app:cardCornerRadius="@dimen/_15sdp"
             app:cardElevation="@dimen/_5sdp">
+
             <ImageView
                 android:layout_width="@dimen/_13sdp"
                 android:layout_height="@dimen/_13sdp"
+                android:layout_gravity="center"
                 android:src="@drawable/task_icon"
-                android:layout_gravity="center"/>
+                app:tint="@color/theme_white"/>
         </androidx.cardview.widget.CardView>
 
     </RelativeLayout>

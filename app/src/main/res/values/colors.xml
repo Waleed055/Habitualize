@@ -8,16 +8,48 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+
+    <color name="theme_black">#101010</color>
+    <color name="theme_white">#F4F3EE</color>
+    <color name="hint_color">#70101010</color>
+    <color name="light_black">#FFFFFFFF</color>
+
 <!--  Custom colors  -->
     <color name="blue">#006EE9</color>
     <color name="bold_text_color">#2F394B</color>
     <color name="small_text_color">#8A8A8A</color>
+
     <color name="theme">#7468EE</color>
     <color name="theme_light">#D4E1F5</color>
+
+    <color name="theme_2">#003049</color>
+    <color name="theme_2_light">#A5BECB</color>
+
+    <color name="theme_3">#DD6F6F</color>
+    <color name="theme_3_light">#F0BCBC</color>
+
+    <color name="theme_4">#F77F00</color>
+    <color name="theme_4_light">#FFD09E</color>
+
+    <color name="theme_5">#FCBF49</color>
+    <color name="theme_5_light">#FDE4B3</color>
+
+    <color name="theme_6">#EAE2B7</color>
+    <color name="theme_6_light">#EFECDD</color>
+
+    <color name="theme_7">#2D85C5</color>
+    <color name="theme_7_light">#9BC1DD</color>
+
+    <color name="theme_8">#DFA693</color>
+    <color name="theme_8_light">#F9E5DF</color>
+
+
     <color name="green">#00CA71</color>
     <color name="gray">#EAE9FB</color>
     <color name="light_theme_bold">#565510</color>
     <color name="light">#CFCEA3</color>
     <color name="text_grey">#929292</color>
     <color name="light_grey">#E0E0E0</color>
+    <color name="lightest_grey">#F5F5F5</color>
+    <color name="warning_red">#B33A3A</color>
 </resources>

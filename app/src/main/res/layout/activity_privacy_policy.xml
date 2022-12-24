@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.privacypolicy.PrivacyPolicyActivity"
+    android:background="@color/theme">
+
+    <include
+        android:id="@+id/included_layout"
+        layout="@layout/header_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/included_layout"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/task_rv_background"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/_40sdp"
+        tools:ignore="MissingClass">
+
+        <TextView
+            android:id="@+id/tv_privacy_policy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="fill"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/theme_black"
+            android:textSize="@dimen/_12sdp" />
+    </ScrollView>
+
+
+</RelativeLayout>

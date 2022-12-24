@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/theme"
     android:orientation="vertical"
-    tools:context=".ui.afterauth.singleday.SingleDayActivity">
+    tools:context=".ui.home.taskdetail.singleday.SingleDayActivity">
 
 
     <RelativeLayout
@@ -23,9 +23,11 @@
             android:layout_marginStart="@dimen/_10sdp"
             android:padding="@dimen/_7sdp"
             android:rotation="180"
-            android:src="@drawable/icon_forward" />
+            android:src="@drawable/icon_forward"
+            app:tint="@color/theme_white"/>
 
         <TextView
+            android:id="@+id/tv_task_day"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -33,15 +35,19 @@
             android:layout_toEndOf="@id/back_button"
             android:fontFamily="@font/poppins_medium"
             android:text="Day n"
-            android:textColor="@color/white"
+            android:textColor="@color/theme_white"
             android:textSize="@dimen/_14sdp" />
 
 
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_premium_card"
             android:layout_width="@dimen/_45sdp"
             android:layout_height="@dimen/_45sdp"
             android:layout_alignParentEnd="true"
-            android:layout_margin="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
             app:cardBackgroundColor="@color/theme"
             app:cardCornerRadius="@dimen/_25sdp"
             app:cardElevation="@dimen/_8sdp">
@@ -53,12 +59,13 @@
                 android:src="@drawable/coin_icon" />
 
             <TextView
+                android:id="@+id/tv_coin_counter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|center_horizontal"
                 android:layout_marginBottom="@dimen/_2sdp"
                 android:text="20"
-                android:textColor="@color/white"
+                android:textColor="@color/theme_white"
                 android:textSize="@dimen/_8sdp" />
         </com.google.android.material.card.MaterialCardView>
 
@@ -73,7 +80,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/challenge_card"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="@dimen/_200sdp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/_60sdp"
@@ -93,7 +100,7 @@
                 android:gravity="center"
                 android:padding="@dimen/_15sdp"
                 android:text="If you forget to brush your teeth during the day and you have difficulty in continuing this habit, add daily reminders to your phone or add brushing to your list if you have a to do list."
-                android:textColor="@color/black"
+                android:textColor="@color/theme_black"
                 android:textSize="@dimen/_14sdp" />
 
             <RelativeLayout
@@ -108,15 +115,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
                     android:fontFamily="@font/poppins_semibold"
-                    android:text="Tap to see Today's challenge"
-                    android:textSize="@dimen/_15sdp"
-                    android:layout_margin="@dimen/_20sdp"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:text="@string/tap_to_see_today_s_challenge"
+                    android:textColor="@color/theme_black"
+                    android:textSize="@dimen/_15sdp" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
-        <RelativeLayout
+        <androidx.cardview.widget.CardView
             android:id="@+id/share_card"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_40sdp"
@@ -124,57 +135,64 @@
             android:layout_marginStart="@dimen/_20sdp"
             android:layout_marginTop="@dimen/_20sdp"
             android:layout_marginEnd="@dimen/_20sdp"
-            android:background="@drawable/background_next_btn">
+            app:cardBackgroundColor="@color/theme"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_3sdp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
+                android:layout_gravity="center"
                 android:fontFamily="@font/montserrat_regular"
-                android:text="Share"
-                android:textColor="@color/white"
+                android:text="@string/share"
+                android:textColor="@color/theme_white"
                 android:textSize="@dimen/_11sdp" />
-        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
 
 
-        <RelativeLayout
+        <androidx.cardview.widget.CardView
             android:id="@+id/complete_task_button"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_40sdp"
             android:layout_below="@id/share_card"
             android:layout_marginHorizontal="@dimen/_20sdp"
-            android:background="@drawable/background_next_btn"
             android:layout_marginTop="@dimen/_10sdp"
-            android:gravity="center_vertical">
+            app:cardBackgroundColor="@color/theme"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_3sdp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/task_complete_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="@font/inter_semi_bold"
-                android:gravity="center"
-                android:text="Complete the task to earn 10"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_11sdp"
-                android:layout_centerInParent="true"/>
+                <TextView
+                    android:id="@+id/task_complete_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/inter_semi_bold"
+                    android:gravity="center"
+                    android:text="@string/complete_the_task_to_earn_10"
+                    android:textColor="@color/theme_white"
+                    android:textSize="@dimen/_11sdp" />
 
-            <ImageView
-                android:layout_width="@dimen/_12sdp"
-                android:layout_height="@dimen/_12sdp"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:src="@drawable/coin_icon"
-                android:layout_toEndOf="@id/task_complete_text"
-                android:layout_centerVertical="true"/>
+                <ImageView
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_toEndOf="@id/task_complete_text"
+                    android:src="@drawable/coin_icon" />
 
-            <ImageView
-                android:layout_width="@dimen/_12sdp"
-                android:layout_height="@dimen/_12sdp"
-                android:layout_marginStart="@dimen/_10sdp"
-                android:src="@drawable/tick_icon"
-                android:visibility="gone"/>
+                <ImageView
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:src="@drawable/tick_icon"
+                    android:visibility="gone" />
+            </RelativeLayout>
 
-        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
 
     </RelativeLayout>
 

@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/theme"
-    tools:context=".ui.afterauth.reminder.ReminderActivity">
+    android:id="@+id/root"
+    tools:context=".ui.reminder.ReminderActivity">
 
 
     <RelativeLayout
@@ -23,7 +24,8 @@
             android:layout_marginStart="@dimen/_10sdp"
             android:padding="@dimen/_7sdp"
             android:rotation="180"
-            android:src="@drawable/icon_forward" />
+            android:src="@drawable/icon_forward"
+            app:tint="@color/theme_white"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -32,13 +34,14 @@
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_toEndOf="@id/back_button"
             android:fontFamily="@font/poppins_medium"
-            android:text="Notifications"
-            android:textColor="@color/white"
+            android:text="@string/reminder"
+            android:textColor="@color/theme_white"
             android:textSize="@dimen/_14sdp" />
 
 
 
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/premium_button"
             android:layout_width="@dimen/_45sdp"
             android:layout_height="@dimen/_45sdp"
             android:layout_alignParentEnd="true"
@@ -54,26 +57,45 @@
                 android:src="@drawable/coin_icon" />
 
             <TextView
+                android:id="@+id/tv_coin_counter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|center_horizontal"
                 android:layout_marginBottom="@dimen/_2sdp"
                 android:text="20"
-                android:textColor="@color/white"
+                android:textColor="@color/theme_white"
                 android:textSize="@dimen/_8sdp" />
         </com.google.android.material.card.MaterialCardView>
 
-
-
-
     </RelativeLayout>
 
-    <FrameLayout
+    <RelativeLayout
+        android:id="@+id/data_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/notification_included_layout"
         android:layout_marginTop="@dimen/_10sdp"
-        android:background="@drawable/task_rv_background">
+        android:background="@drawable/task_rv_background"
+        android:layout_below="@id/notification_included_layout">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/notification_gif_layout"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="@dimen/_160sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/intor1_gif" />
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/hint_color"
+            android:layout_below="@id/notification_gif_layout"
+            android:layout_marginTop="@dimen/_10sdp"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/reminder_rv"
@@ -81,12 +103,23 @@
             android:layout_height="match_parent"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:spanCount="4"
+            android:layout_below="@id/view"
             android:layout_marginHorizontal="@dimen/_10sdp"
             android:orientation="vertical"
             tools:listitem="@layout/item_reminder"
-            android:layout_marginTop="@dimen/_40sdp" />
+            android:layout_marginTop="@dimen/_10sdp" />
+    </RelativeLayout>
 
-    </FrameLayout>
 
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view"
+            android:layout_width="@dimen/_300sdp"
+            android:layout_height="@dimen/_300sdp"
+            android:layout_centerInParent="true"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/empty_list_gif"
+            android:visibility="gone"/>
 
+    </RelativeLayout>
 </LinearLayout>

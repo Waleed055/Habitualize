@@ -1,33 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#F7F6D4"
     android:id="@+id/bottomSheet"
-    >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F6D4">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_given_gift"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_given_gift" />
 
     <TextView
-        android:id="@+id/sending_label"
+        android:id="@+id/tv_sending_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Send to : Ahmad"
-        android:textColor="@color/black"
+        android:layout_below="@id/rv_given_gift"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
         android:fontFamily="@font/inter_semi_bold"
-        android:textSize="@dimen/_14sdp"
-        android:layout_margin="@dimen/_5sdp"
-        />
+        android:textColor="@color/theme_black"
+        android:textSize="@dimen/_14sdp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/item_gift_bottom_sheet_rv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/tv_sending_label"
+        android:layout_marginTop="@dimen/_5sdp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:spanCount="3"
-        android:layout_below="@id/sending_label"
-        android:layout_marginTop="@dimen/_5sdp"
         tools:listitem="@layout/item_gift"
-        />
+        android:layout_marginBottom="@dimen/_20sdp"/>
 
 </RelativeLayout>

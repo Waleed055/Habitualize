@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/theme"
-    tools:context=".ui.afterauth.communitychallenges.communitychallengedetail.CommunityChallengeDetailActivity">
+    android:id="@+id/root"
+    tools:context=".ui.communitychallenges.communitychallengedetail.CommunityChallengeDetailActivity">
 
     <RelativeLayout
         android:id="@+id/header"
@@ -21,21 +22,67 @@
             android:rotation="180"
             android:padding="@dimen/_7sdp"
             android:layout_centerVertical="true"
-            android:layout_marginStart="@dimen/_10sdp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Challenge Title"
-            android:fontFamily="@font/poppins_medium"
-            android:textSize="@dimen/_14sdp"
-            android:textColor="@color/white"
-            android:layout_toEndOf="@id/back_button"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="@dimen/_10sdp"/>
+            android:layout_marginStart="@dimen/_10sdp"
+            app:tint="@color/theme_white"/>
 
         <LinearLayout
-            android:id="@+id/create_challenge_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_toStartOf="@id/ll_edit_icon"
+            android:layout_toEndOf="@id/back_button"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_challenge_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:inputType="textMultiLine"
+                android:maxLines="2"
+                android:textColor="@color/theme_white"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                android:id="@+id/tv_challenge_created_by"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/theme_white"
+                android:textSize="@dimen/_8sdp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_edit_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/like_layout"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/ic_edit_icon"
+                app:tint="@color/theme_light" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center_horizontal"
+                android:text="@string/edit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_6sdp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/like_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -44,13 +91,16 @@
             android:layout_marginEnd="@dimen/_20sdp"
             android:layout_centerVertical="true">
             <ImageView
+                android:id="@+id/iv_like_icon"
                 android:layout_width="@dimen/_20sdp"
                 android:layout_height="@dimen/_20sdp"
-                android:src="@drawable/heart"/>
+                android:src="@drawable/heart"
+                app:tint="@color/theme_light"/>
             <TextView
+                android:id="@+id/tv_like_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Like"
+                android:text="@string/like"
                 android:fontFamily="@font/montserrat_regular"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_6sdp"
@@ -68,43 +118,61 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/challenge_icon"
+            android:id="@+id/tv_challenge_emoji"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="😍"
             android:layout_gravity="center_horizontal"
-            android:textSize="@dimen/_50sdp"
             android:layout_marginTop="@dimen/_20sdp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:textSize="@dimen/_50sdp" />
 
         <TextView
+            android:id="@+id/tv_challenge_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="This will be the description of the challenge. "
-            android:textSize="@dimen/_12sdp"
-            android:fontFamily="@font/montserrat_regular"
-            android:textColor="@color/black"
             android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_regular"
             android:gravity="center_horizontal"
-            android:layout_marginTop="@dimen/_10sdp"/>
+            android:textColor="@color/theme_black"
+            android:textSize="@dimen/_12sdp" />
 
         <View
             android:id="@+id/view"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_1sdp"
-            android:background="@color/gray"
-            android:layout_below="@id/notification_gif_layout"
-            android:layout_marginTop="@dimen/_10sdp"/>
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/hint_color" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/community_challenge_detail_recyclerview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem="@layout/item_community_challenges_detail"
+            android:layout_marginTop="@dimen/_5sdp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            android:layout_marginTop="@dimen/_5sdp"/>
+            tools:listitem="@layout/item_community_challenges_detail" />
 
 
     </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_start_challenge"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_35sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="@dimen/_3sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_30sdp"
+        app:cardBackgroundColor="@color/theme">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start_challenge"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/theme_white"
+            android:textSize="@dimen/_10sdp"
+            android:layout_gravity="center"/>
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>
