@@ -48,7 +48,7 @@
     <string name="login_navigation_text">Hesabınız yok mu? istemek<b>  <u>SignUp</u></b>  </string>
     <string name="more">Daha<![CDATA[ >>]]></string>
     <string name="hide"><![CDATA[<< ]]>Saklamak</string>
-    <string name="by_subscribing_you_confirm_that_you_accept_our_terms_and_conditions">Abone olarak, aşağıdakileri kabul ettiğinizi onaylarsınız:<u><b>Şartlar ve koşullar</b></u>  </string>
+    <string name="by_subscribing_you_confirm_that_you_accept_our_terms_and_conditions">Abone olarak, aşağıdakileri kabul ettiğinizi onaylarsınız:<u><b>Şartlar ve koşullar</b></u> ile <b><u>gizlilik politikasını</u></b></string>
     <string name="privacy_policy">Gizlilik Politikası</string>
     <string name="coins">paralar</string>
     <string name="you_have_received">Almış olduğunuz</string>
@@ -152,4 +152,6 @@
     <string name="rate_us">Bize Puan Verin</string>
     <string name="invite_link_error">Geçersiz Bağlantı!!</string>
     <string name="new_blog_post">Yeni Blog Gönderisi</string>
+    <string name="privacy_policy_text">Devam ederek &amp; <b><u>Şartlar ve koşullar</u></b> ile <b><u>gizlilik politikasını</u></b>kabul ediyorum</string>
+    <string name="privacy_policy_permission"> Lütfen Şartlar ve koşullar ile gizlilik politikasını kabul edin </string>
 </resources>

@@ -70,7 +70,6 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/data_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/_10sdp"
@@ -78,6 +77,7 @@
         android:layout_below="@id/notification_included_layout">
 
     <RelativeLayout
+        android:id="@+id/data_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/_10sdp">

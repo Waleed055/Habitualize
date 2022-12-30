@@ -9,6 +9,7 @@ import androidx.activity.viewModels
 import androidx.core.content.ContextCompat
 import com.example.habitualize.R
 import com.example.habitualize.databinding.ActivityCreateFeedBinding
+import com.example.habitualize.managers.AdsManager
 import com.example.habitualize.ui.models.FeedModel
 import com.example.habitualize.utils.*
 import dagger.hilt.android.AndroidEntryPoint
@@ -18,8 +19,8 @@ import java.util.*
 class CreateFeedActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCreateFeedBinding
     private val viewModel: CreateFeedViewModel by viewModels()
-
     private var selectedLange = ""
+    private var isAddLoaded = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,10 +29,14 @@ class CreateFeedActivity : AppCompatActivity() {
         setContentView(binding.root)
         selectedLange = SharePrefHelper.readString(languageCode).toString()
 
-
+        loadRewardedAd()
         initSpinner()
         initListeners()
         initObserver()
+    }
+
+    private fun loadRewardedAd(){
+        AdsManager.getInstance().loadRewardedAd(this){ isAddLoaded = it }
     }
 
     private fun initObserver(){
@@ -50,18 +55,40 @@ class CreateFeedActivity : AppCompatActivity() {
     private fun initListeners() {
         binding.cvSaveBtn.setOnClickListener {
             if (checkFields()) {
-                var feedModel = FeedModel(
-                    user_id = SharePrefHelper.readString(userId).toString(),
-                    user_name = SharePrefHelper.readString(userName).toString(),
-                    user_image = SharePrefHelper.readString(userImage).toString(),
-                    question = binding.etFeedQuestion.text.toString(),
-                    answer = binding.etFeedAnswer.text.toString(),
-                    created_at = "${ Calendar.getInstance().timeInMillis }", //This method returns the time in millis
-                    language_code = selectedLange
-                )
-                viewModel.createFeed(this, feedModel)
+                if (isAddLoaded){
+                    AdsManager.getInstance().showRewardedVideo(this){
+                        if (it){
+                            addFeed()
+                        }else{
+                            loadRewardedAd()
+                            Toast.makeText(
+                                this,
+                                "Please watch full video to create forum!",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+                    }
+                }else{
+                    addFeed()
+                }
             }
         }
+
+        binding.backButton.setOnClickListener { finish() }
+
+    }
+
+    private fun addFeed(){
+        var feedModel = FeedModel(
+            user_id = SharePrefHelper.readString(userId).toString(),
+            user_name = SharePrefHelper.readString(userName).toString(),
+            user_image = SharePrefHelper.readString(userImage).toString(),
+            question = binding.etFeedQuestion.text.toString(),
+            answer = binding.etFeedAnswer.text.toString(),
+            created_at = "${ Calendar.getInstance().timeInMillis }", //This method returns the time in millis
+            language_code = selectedLange
+        )
+        viewModel.createFeed(this, feedModel)
     }
 
     private fun initSpinner() {

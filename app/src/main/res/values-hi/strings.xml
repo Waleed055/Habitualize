@@ -48,7 +48,7 @@
     <string name="login_navigation_text">खाता नहीं है? चाहना<b>  <u>SignUp</u></b>  </string>
     <string name="more">अधिक<![CDATA[ >>]]></string>
     <string name="hide">छ<![CDATA[<< ]]>िपाना</string>
-    <string name="by_subscribing_you_confirm_that_you_accept_our_terms_and_conditions">सब्सक्राइब करके आप पुष्टि करते हैं कि आप हमारे स्वीकार करते हैं<u><b>नियम और शर्तें</b></u>  </string>
+    <string name="by_subscribing_you_confirm_that_you_accept_our_terms_and_conditions">सब्सक्राइब करके आप पुष्टि करते हैं कि आप हमारे स्वीकार करते हैं<u><b>नियम और शर्तें</b></u> और <b><u>गोपनीयता नीति</u></b></string>
     <string name="privacy_policy">गोपनीयता नीति</string>
     <string name="coins">सिक्के</string>
     <string name="you_have_received">तुम्हारे द्वारा प्राप्त किया गया</string>
@@ -152,5 +152,6 @@
     <string name="rate_us">हमें रेट करें</string>
     <string name="invite_link_error">अमान्य लिंक!!</string>
     <string name="new_blog_post">नई ब्लॉग पोस्ट</string>
-
+    <string name="privacy_policy_text">जारी रखकर, मैंने पुष्टि की है कि मैंने &amp; <b><u>नियम और शर्तों</u></b> और <b><u>गोपनीयता नीति</u></b>से सहमत हैं</string>
+    <string name="privacy_policy_permission"> कृपया नियमों और शर्तों और गोपनीयता नीति से सहमत हों </string>
 </resources>

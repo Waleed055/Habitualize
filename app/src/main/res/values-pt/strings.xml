@@ -47,7 +47,7 @@
     <string name="login_navigation_text">Não tem uma conta? deseja <b><u>Inscrever-se</u></b></string>
     <string name="more"><u>Mais</u><![CDATA[ >>]]></string>
     <string name="hide"><u><![CDATA[<< ]]>Ocultar</u></string>
-    <string name="by_subscribing_you_confirm_that_you_accept_our_terms_and_conditions">Ao se inscrever, você confirma que aceita nossos <u><b>Termos e Condições</b></u></string>
+    <string name="by_subscribing_you_confirm_that_you_accept_our_terms_and_conditions">Ao se inscrever, você confirma que aceita nossos <u><b>Termos e Condições</b></u> e <b><u>política de privacidade</u></b></string>
     <string name="privacy_policy">Política de Privacidade</string>
     <string name="coins">moedas</string>
     <string name="you_have_received">Você recebeu </string>
@@ -151,4 +151,7 @@
     <string name="rate_us">Avalie-nos</string>
     <string name="invite_link_error">Link inválido!!</string>
     <string name="new_blog_post">Nova postagem no blog</string>
+    <string name="privacy_policy_text">Ao continuar, confirmo que li &amp; concorda com os <b><u>Termos e condições</u></b> e <b><u>política de privacidade</u></b></string>
+    <string name="privacy_policy_permission"> Por favor, concorde com os Termos e condições e política de privacidade </string>
+
 </resources>

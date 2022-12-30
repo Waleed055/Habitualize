@@ -48,7 +48,7 @@
     <string name="login_navigation_text">Walang account? gusto<b>  <u>SignUp</u></b>  </string>
     <string name="more">Higit pa<![CDATA[ >>]]></string>
     <string name="hide"><![CDATA[<< ]]>Tago</string>
-    <string name="by_subscribing_you_confirm_that_you_accept_our_terms_and_conditions">Sa pamamagitan ng Pag-subscribe, kinukumpirma mo na tinatanggap mo ang aming<u><b>Mga Tuntunin at Kundisyon</b></u></string>
+    <string name="by_subscribing_you_confirm_that_you_accept_our_terms_and_conditions">Sa pamamagitan ng Pag-subscribe, kinukumpirma mo na tinatanggap mo ang aming<u><b>Mga Tuntunin at Kundisyon</b></u> at <b><u>patakaran sa privacy</u></b></string>
     <string name="privacy_policy">Patakaran sa Privacy</string>
     <string name="coins">mga barya</string>
     <string name="you_have_received">Ikaw ay Nakatanggap</string>
@@ -152,4 +152,6 @@
     <string name="rate_us">I-rate Kami</string>
     <string name="invite_link_error">Invalid Link!!</string>
     <string name="new_blog_post">Bagong Blog Post</string>
+    <string name="privacy_policy_text">Sa pagpapatuloy, kinumpirma ko na nabasa ko na ang &amp; sumasang-ayon sa <b><u>Mga Tuntunin at kundisyon</u></b> at <b><u>patakaran sa privacy</u></b></string>
+    <string name="privacy_policy_permission"> Mangyaring sumang-ayon sa Mga Tuntunin at kundisyon at patakaran sa privacy </string>
 </resources>

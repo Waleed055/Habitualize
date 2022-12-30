@@ -1,6 +1,7 @@
 package com.example.habitualize.ui.auth.login
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -58,13 +59,35 @@ class LoginActivity : AppCompatActivity() {
         binding.tvSignupBtn.setOnClickListener {
             startActivity(Intent(this,SignUpActivity::class.java))
         }
+
+        binding.privacyText.setOnClickListener {
+            privacyPolicyEvent()
+        }
+
+    }
+
+    private fun privacyPolicyEvent(){
+        val intent = Intent(
+            Intent.ACTION_VIEW,
+            Uri.parse("https://habitualizerapp.com/privacy-policy/")
+        )
+        if (intent.resolveActivity(packageManager) != null) {
+            startActivity(intent)
+        }else{
+            Toast.makeText(this, "App is not Installed to open this link!", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun checkUserDetails(): Boolean{
         return if(binding.etUserName.text.isNotEmpty()){
             if(binding.etPassword.text.isNotEmpty()){
                 if(binding.etPassword.text.length > 5){
-                    true
+                    if(binding.cbPrivacyPolicy.isChecked){
+                        true
+                    }else{
+                        Toast.makeText(this, resources.getString(R.string.privacy_policy_permission), Toast.LENGTH_SHORT).show()
+                        false
+                    }
                 }else{
                     Toast.makeText(this, resources.getString(R.string.short_pw_error), Toast.LENGTH_SHORT).show()
                     false
@@ -78,6 +101,7 @@ class LoginActivity : AppCompatActivity() {
             false
         }
     }
+
     private fun updateTheme(position: Int){
         when(position){
             0->{ setThemeColor(R.color.theme) }

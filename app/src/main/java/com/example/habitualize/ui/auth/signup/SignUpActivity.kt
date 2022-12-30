@@ -1,6 +1,7 @@
 package com.example.habitualize.ui.auth.signup
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -63,6 +64,22 @@ class SignUpActivity : AppCompatActivity() {
         binding.tvLoginButton.setOnClickListener {
             onBackPressed()
         }
+
+        binding.privacyText.setOnClickListener {
+            privacyPolicyEvent()
+        }
+    }
+
+    private fun privacyPolicyEvent(){
+        val intent = Intent(
+            Intent.ACTION_VIEW,
+            Uri.parse("https://habitualizerapp.com/privacy-policy/")
+        )
+        if (intent.resolveActivity(packageManager) != null) {
+            startActivity(intent)
+        }else{
+            Toast.makeText(this, "App is not Installed to open this link!", Toast.LENGTH_SHORT).show()
+        }
     }
 
     override fun onBackPressed() {
@@ -79,7 +96,12 @@ class SignUpActivity : AppCompatActivity() {
                             if (binding.etPassword.text.length > 5) {
                                 if (binding.etConfirmPassword.text.isNotEmpty()) {
                                     if (binding.etPassword.text.toString() == binding.etConfirmPassword.text.toString()) {
-                                        true
+                                        if(binding.cbPrivacyPolicy.isChecked){
+                                            true
+                                        }else{
+                                            Toast.makeText(this, resources.getString(R.string.privacy_policy_permission), Toast.LENGTH_SHORT).show()
+                                            false
+                                        }
                                     } else {
                                         Toast.makeText(
                                             this,

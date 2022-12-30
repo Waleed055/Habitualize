@@ -9,6 +9,7 @@ import androidx.activity.viewModels
 import androidx.core.content.ContextCompat
 import com.example.habitualize.R
 import com.example.habitualize.databinding.ActivityChallengeBinding
+import com.example.habitualize.managers.AdsManager
 import com.example.habitualize.ui.challenge.adapter.DaysAdapter
 import com.example.habitualize.ui.models.CommunityChallengeModel
 import com.example.habitualize.utils.*
@@ -27,29 +28,35 @@ class ChallengeActivity : AppCompatActivity() {
     private var whichScreen = 0
     private var selectedLanguage = ""
     private var challenge_id = ""
+    private var isAddLoaded = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         EmojiManager.install(GoogleEmojiProvider())
         binding = ActivityChallengeBinding.inflate(layoutInflater)
         updateTheme(SharePrefHelper.readInteger(selectedColorIndex))
-        binding.tvTitle.text = resources.getString(R.string.create)
         setContentView(binding.root)
         whichScreen = intent.getIntExtra("whichScreen", 0)
 
         if(whichScreen == 2){ // reached for edit
-            binding.tvCreateChallenge.text = "Update"
+            binding.tvCreateChallenge.text = resources.getString(R.string.update)
             challenge_id = intent.getStringExtra("challenge_id").toString()
             viewModel.getChallengeData(this,challenge_id)
+            binding.tvTitle.text = resources.getString(R.string.update)
         }else{
             binding.tvCreateChallenge.text = resources.getString(R.string.create)
+            binding.tvTitle.text = resources.getString(R.string.create)
         }
 
-
+        loadRewardedAd()
         initAdapter()
         initListener()
         initSpinner()
         initObserver()
+    }
+
+    private fun loadRewardedAd(){
+        AdsManager.getInstance().loadRewardedAd(this){ isAddLoaded = it }
     }
 
     private fun initObserver(){
@@ -99,60 +106,21 @@ class ChallengeActivity : AppCompatActivity() {
             if (!binding.challengeName.text.isNullOrEmpty()){
                 if (!binding.challengeTextInputEditText.text.isNullOrEmpty()){
                     if (!binding.challengeEmoji.text.isNullOrEmpty()){
-                        when (whichScreen) {
-                            0 -> { // create local task
-                                viewModel.createNewChallenge(
-                                    activity = this,
-                                    challenge_name = binding.challengeName.text.toString(),
-                                    challenge_description = binding.challengeTextInputEditText.text.toString(),
-                                    challenge_emoji = binding.challengeEmoji.text.toString(),
-                                    tasksList = tasksList,
-                                    language_code = selectedLanguage
-                                )
-
-
-                                //----------------------------------------------------------------------
-                                //counter
-                                var _counter  = SharePrefHelper.readInteger(addTaskCounter) + 1
-                                SharePrefHelper.writeInteger(addTaskCounter, _counter)
-
+                        if (isAddLoaded){
+                            AdsManager.getInstance().showRewardedVideo(this){
+                                if (it){
+                                    createChallenge()
+                                }else{
+                                    loadRewardedAd()
+                                    Toast.makeText(
+                                        this,
+                                        "Please watch full video to create/update Challenge!",
+                                        Toast.LENGTH_SHORT
+                                    ).show()
+                                }
                             }
-                            1 -> { // create community challenge
-                                viewModel.createCommunityChallenge(
-                                    this,
-                                    CommunityChallengeModel(
-                                        user_id = SharePrefHelper.readString(userId).toString(),
-                                        user_name = SharePrefHelper.readString(userName).toString(),
-                                        challenge_name = binding.challengeName.text.toString(),
-                                        challenge_description = binding.challengeTextInputEditText.text.toString(),
-                                        challenge_emoji = binding.challengeEmoji.text.toString(),
-                                        challenge_list = tasksList,
-                                        language_code = selectedLanguage
-                                    )
-                                )
-
-                                //----------------------------------------------------------------------
-                                //counter
-                                var _counter  = SharePrefHelper.readInteger(
-                                    addCommunityChallengeCounter) + 1
-                                SharePrefHelper.writeInteger(addCommunityChallengeCounter, _counter)
-
-                            }
-                            2 -> {
-                                viewModel.updateCommunityChallenge(
-                                    this,
-                                    CommunityChallengeModel(
-                                        user_id = SharePrefHelper.readString(userId).toString(),
-                                        user_name = SharePrefHelper.readString(userName).toString(),
-                                        challenge_id = challenge_id,
-                                        challenge_name = binding.challengeName.text.toString(),
-                                        challenge_description = binding.challengeTextInputEditText.text.toString(),
-                                        challenge_emoji = binding.challengeEmoji.text.toString(),
-                                        challenge_list = tasksList,
-                                        language_code = selectedLanguage
-                                    )
-                                )
-                            }
+                        }else{
+                            createChallenge()
                         }
                     }else{
                         Toast.makeText(this, resources.getString(R.string.select_emoji), Toast.LENGTH_SHORT).show()
@@ -162,6 +130,64 @@ class ChallengeActivity : AppCompatActivity() {
                 }
             }else{
                 Toast.makeText(this, resources.getString(R.string.enter_challenge_name), Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    private fun createChallenge(){
+        when (whichScreen) {
+            0 -> { // create local task
+                viewModel.createNewChallenge(
+                    activity = this,
+                    challenge_name = binding.challengeName.text.toString(),
+                    challenge_description = binding.challengeTextInputEditText.text.toString(),
+                    challenge_emoji = binding.challengeEmoji.text.toString(),
+                    tasksList = tasksList,
+                    language_code = selectedLanguage
+                )
+
+
+                //----------------------------------------------------------------------
+                //counter
+                var _counter  = SharePrefHelper.readInteger(addTaskCounter) + 1
+                SharePrefHelper.writeInteger(addTaskCounter, _counter)
+
+            }
+            1 -> { // create community challenge
+                viewModel.createCommunityChallenge(
+                    this,
+                    CommunityChallengeModel(
+                        user_id = SharePrefHelper.readString(userId).toString(),
+                        user_name = SharePrefHelper.readString(userName).toString(),
+                        challenge_name = binding.challengeName.text.toString(),
+                        challenge_description = binding.challengeTextInputEditText.text.toString(),
+                        challenge_emoji = binding.challengeEmoji.text.toString(),
+                        challenge_list = tasksList,
+                        language_code = selectedLanguage
+                    )
+                )
+
+                //----------------------------------------------------------------------
+                //counter
+                var _counter  = SharePrefHelper.readInteger(
+                    addCommunityChallengeCounter) + 1
+                SharePrefHelper.writeInteger(addCommunityChallengeCounter, _counter)
+
+            }
+            2 -> {
+                viewModel.updateCommunityChallenge(
+                    this,
+                    CommunityChallengeModel(
+                        user_id = SharePrefHelper.readString(userId).toString(),
+                        user_name = SharePrefHelper.readString(userName).toString(),
+                        challenge_id = challenge_id,
+                        challenge_name = binding.challengeName.text.toString(),
+                        challenge_description = binding.challengeTextInputEditText.text.toString(),
+                        challenge_emoji = binding.challengeEmoji.text.toString(),
+                        challenge_list = tasksList,
+                        language_code = selectedLanguage
+                    )
+                )
             }
         }
     }

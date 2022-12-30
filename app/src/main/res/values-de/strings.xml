@@ -49,7 +49,7 @@
     <string name="login_navigation_text">Sie haben kein Konto? möchte<b>  <u>SignUp</u></b>  </string>
     <string name="more">Mehr<![CDATA[ >>]]></string>
     <string name="hide"><![CDATA[<< ]]>Ausblenden</string>
-    <string name="by_subscribing_you_confirm_that_you_accept_our_terms_and_conditions">Mit dem Abonnieren bestätigen Sie, dass Sie unsere akzeptieren<u><b>Geschäftsbedingungen</b></u>  </string>
+    <string name="by_subscribing_you_confirm_that_you_accept_our_terms_and_conditions">Mit dem Abonnieren bestätigen Sie, dass Sie unsere akzeptieren<u><b>Geschäftsbedingungen</b></u>  und der <b><u>Datenschutzerklärung zu</u></b></string>
     <string name="privacy_policy">Datenschutz-Bestimmungen</string>
     <string name="coins">Münzen</string>
     <string name="you_have_received">Du hast erhalten</string>
@@ -153,4 +153,6 @@
     <string name="rate_us">Bewerte uns</string>
     <string name="invite_link_error">Ungültiger Link!!</string>
     <string name="new_blog_post">Neuer Blogbeitrag</string>
+    <string name="privacy_policy_text">Indem ich fortfahre, bestätige ich, dass ich gelesen habe &amp; stimme den <b><u>Allgemeinen Geschäftsbedingungen</u></b> und der <b><u>Datenschutzerklärung zu</u></b></string>
+    <string name="privacy_policy_permission"> Bitte stimmen Sie den Nutzungsbedingungen und der Datenschutzrichtlinie zu </string>
 </resources>

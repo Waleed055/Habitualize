@@ -9,7 +9,7 @@
     android:id="@+id/root"
     tools:context=".ui.auth.signup.SignUpActivity">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/_40sdp"
@@ -17,7 +17,10 @@
         android:background="@drawable/task_rv_background">
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_above="@id/linearlayout"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_30sdp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -29,7 +32,7 @@
                     android:layout_height="@dimen/_80sdp"
                     android:src="@drawable/splash_icon"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="@dimen/_40sdp"/>
+                    android:layout_marginTop="@dimen/_10sdp"/>
 
                 <TextView
                     android:id="@+id/app_name"
@@ -236,6 +239,31 @@
 
         </ScrollView>
 
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:gravity="center_vertical">
+            <CheckBox
+                android:id="@+id/cbPrivacyPolicy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:buttonTint="@color/text_grey"/>
+            <TextView
+                android:id="@+id/privacyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/privacy_policy_text"
+                android:textColor="@color/hint_color"
+                android:textSize="@dimen/_10sdp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </RelativeLayout>

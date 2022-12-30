@@ -48,7 +48,7 @@
     <string name="login_navigation_text">アカウントを持っていませんか?をしたい<b>  <u>SignUp</u></b>  </string>
     <string name="more">もっと<![CDATA[ >>]]></string>
     <string name="hide"><![CDATA[<< ]]>隠れる</string>
-    <string name="by_subscribing_you_confirm_that_you_accept_our_terms_and_conditions">購読することにより、あなたは私たちを受け入れることを確認します<u><b>規約と条件</b></u>  </string>
+    <string name="by_subscribing_you_confirm_that_you_accept_our_terms_and_conditions">購読することにより、あなたは私たちを受け入れることを確認します<u><b>規約と条件</b></u> と<b><u>プライバシーポリシー</u></b> </string>
     <string name="privacy_policy">プライバシーポリシー</string>
     <string name="coins">コイン</string>
     <string name="you_have_received">受け取りました</string>
@@ -152,4 +152,6 @@
     <string name="rate_us">評価してください</string>
     <string name="invite_link_error">リンクが無効です!!</string>
     <string name="new_blog_post">新しいブログ投稿</string>
+    <string name="privacy_policy_text">続行することで、私は以下を読んだことを確認しました。 <b><u>利用規約</u></b>と<b><u>プライバシーポリシー</u></b>に同意する</string>
+    <string name="privacy_policy_permission">利用規約とプライバシーポリシーに同意してください</string>
 </resources>

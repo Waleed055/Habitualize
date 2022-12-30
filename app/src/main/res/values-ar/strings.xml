@@ -48,7 +48,7 @@
     <string name="login_navigation_text">ليس لديك حساب؟ اريد ان<b>  <u>SignUp</u></b>  </string>
     <string name="more"><![CDATA[ <<]]>أكثر</string>
     <string name="hide"><![CDATA[>> ]]>يخفي</string>
-    <string name="by_subscribing_you_confirm_that_you_accept_our_terms_and_conditions"><u><b>الأحكام والشروط</b></u>من خلال الاشتراك فإنك تؤكد قبولك لدينا</string>
+    <string name="by_subscribing_you_confirm_that_you_accept_our_terms_and_conditions"><u><b>الأحكام والشروط</b></u> و <b><u> سياسة الخصوصية </u></b>من خلال الاشتراك فإنك تؤكد قبولك لدينا</string>
     <string name="privacy_policy">سياسة الخصوصية</string>
     <string name="coins">عملات معدنية</string>
     <string name="you_have_received">لقد تلقيت</string>
@@ -152,4 +152,6 @@
     <string name = "rate_us"> قيمنا </string>
     <string name = "invite_link_error"> ارتباط غير صالح !! </string>
     <string name = "new_blog_post"> مشاركة مدونة جديدة </string>
+    <string name="privacy_policy_text"> بالمتابعة ، أكدت أنني قد قرأت &amp; ؛ الموافقة على <b> <u> البنود والشروط </u></b> و <b><u> سياسة الخصوصية </u></b></string>
+    <string name = "privacy_policy_permission"> يُرجى الموافقة على البنود والشروط وسياسة الخصوصية </string>
 </resources>

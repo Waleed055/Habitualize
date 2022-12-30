@@ -48,7 +48,7 @@
     <string name="login_navigation_text">Tidak punya akun? ingin<b>  <u>SignUp</u></b>  </string>
     <string name="more">Lagi<![CDATA[ >>]]></string>
     <string name="hide"><![CDATA[<< ]]>Bersembunyi</string>
-    <string name="by_subscribing_you_confirm_that_you_accept_our_terms_and_conditions">Dengan Berlangganan Anda mengonfirmasi bahwa Anda menerima kami<u><b>Syarat dan ketentuan</b></u>  </string>
+    <string name="by_subscribing_you_confirm_that_you_accept_our_terms_and_conditions">Dengan Berlangganan Anda mengonfirmasi bahwa Anda menerima kami<u><b>Syarat dan ketentuan</b></u> dan <b><u>kebijakan privasi</u></b></string>
     <string name="privacy_policy">Kebijakan pribadi</string>
     <string name="coins">koin</string>
     <string name="you_have_received">Anda telah Menerima</string>
@@ -152,4 +152,6 @@
     <string name="rate_us">Nilai Kami</string>
     <string name="invite_link_error">Tautan Tidak Valid!!</string>
     <string name="new_blog_post">Entri Blog Baru</string>
+    <string name="privacy_policy_text">Dengan melanjutkan, saya mengonfirmasi bahwa saya telah membaca &amp; menyetujui <b><u>Syarat dan ketentuan</u></b> dan <b><u>kebijakan privasi</u></b></string>
+    <string name="privacy_policy_permission"> Harap setuju dengan Syarat dan ketentuan dan kebijakan privasi </string>
 </resources>

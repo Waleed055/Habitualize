@@ -69,7 +69,7 @@
     <string name="login_navigation_text">Don\'t have an account? want to <b><u>SignUp</u></b></string>
     <string name="more"><u>More</u><![CDATA[ >>]]></string>
     <string name="hide"><![CDATA[<< ]]><u>Hide</u></string>
-    <string name="by_subscribing_you_confirm_that_you_accept_our_terms_and_conditions">By Subscribing you confirm that you accept our <u><b>Terms and Conditions</b></u></string>
+    <string name="by_subscribing_you_confirm_that_you_accept_our_terms_and_conditions">By Subscribing you confirm that you accept our <u><b>Terms and Conditions</b></u> and <b><u>privacy policy</u></b></string>
     <string name="privacy_policy">Privacy Policy</string>
     <string name="coins">coins</string>
     <string name="you_have_received">You have Received </string>
@@ -173,4 +173,6 @@
     <string name="rate_us">Rate Us</string>
     <string name="invite_link_error">Invalid Link!!</string>
     <string name="new_blog_post">New Blog Post</string>
+    <string name="privacy_policy_text">By continuing, I confirmed that I have read &amp; agree to the <b><u>Terms and conditions</u></b> and <b><u>privacy policy</u></b></string>
+    <string name="privacy_policy_permission">Please do agree with the Terms and conditions and privacy policy </string>
 </resources>

@@ -48,7 +48,7 @@
     <string name="login_navigation_text">Немає облікового запису? хочу<b>  <u>SignUp</u></b>  </string>
     <string name="more">більше<![CDATA[ >>]]></string>
     <string name="hide"><![CDATA[<< ]]>Сховати</string>
-    <string name="by_subscribing_you_confirm_that_you_accept_our_terms_and_conditions">Підписуючись, ви підтверджуєте, що приймаєте наші<u><b>Условия и положения</b></u>  </string>
+    <string name="by_subscribing_you_confirm_that_you_accept_our_terms_and_conditions">Підписуючись, ви підтверджуєте, що приймаєте наші<u><b>Условия и положения</b></u> и <b><u>политикой конфиденциальности</u></b></string>
     <string name="privacy_policy">Політика конфіденційності</string>
     <string name="coins">монети</string>
     <string name="you_have_received">Ви отримали</string>
@@ -152,4 +152,6 @@
     <string name="rate_us">Оцените нас</string>
     <string name="invite_link_error">Неверная ссылка!!</string>
     <string name="new_blog_post">Новая запись в блоге</string>
+    <string name="privacy_policy_text">Продолжая, я подтверждаю, что прочитал &amp; соглашаетесь с <b><u>Общими положениями и условиями</u></b> и <b><u>политикой конфиденциальности</u></b></string>
+    <string name="privacy_policy_permission"> Пожалуйста, примите Условия использования и политику конфиденциальности </string>
 </resources>
